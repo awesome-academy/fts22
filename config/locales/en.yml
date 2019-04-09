@@ -1,4 +1,7 @@
 en:
+  will_paginate:
+    next_label: Next
+    previous_label: Previous
   layouts:
     header:
       eng: English
@@ -15,4 +18,16 @@ en:
       title: Courses
       heading: My courses
       course_image: Course image
-
+  sessions:
+      new:
+        title: Login
+        heading: Please log in
+        login_button: Log in
+        email: Email
+        password: Password
+        remember: Remember me
+  controllers:
+    sessions_controller:
+      login_failed: Invalid email/password combination
+    users_controller:
+      not_logged_in_yet: Please login to continue

@@ -28,14 +28,16 @@
                 <li class="nav-item"><a class="nav-link" href="courses.html"><%= t".course" %></a>
               </ul>
             </li>
+            <% if logged_in? %>
             <li class="nav-item submenu dropdown">
               <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                aria-expanded="false">Vu phan</a>
+                aria-expanded="false"><%= current_user.name %></a>
               <ul class="dropdown-menu">
                 <li class="nav-item"><a class="nav-link" href="courses.html"><%= t".profile" %></a>
-                <li class="nav-item"><a class="nav-link" href="course-details.html"><%= t".logout" %></a></li>
+                <li class="nav-item"><%= link_to t(".logout"), logout_path, method: :delete, class: "nav-link" %></li>
               </ul>
             </li>
+            <% end %>
           </ul>
         </div>
       </div>

@@ -1,4 +1,5 @@
 app:
+  keep_login: 1
   models:
     user:
       name_max_length: 50

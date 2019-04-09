@@ -18,6 +18,15 @@ vi:
         title: Các khóa học
         heading: Khóa học của tôi
         course_image: Hình ảnh khóa học
+      show:
+        title: Chi tiết khóa học
+        objective: Mục tiêu khóa học
+        subjects: Môn học
+        trainer: Tên người hướng dẫn
+        members: Thành viên
+        schedule: Lịch trình dự kiến
+        to: đến
+
   sessions:
       new:
         title: Đăng nhập
@@ -31,3 +40,5 @@ vi:
       login_failed: Email hoặc mật khẩu không đúng
     users_controller:
       not_logged_in_yet: Vui lòng đăng nhập để tiếp tục
+    courses_controller:
+      course_not_found: Khóa học này không còn tồn tại

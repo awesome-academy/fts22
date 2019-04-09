@@ -18,6 +18,14 @@ en:
       title: Courses
       heading: My courses
       course_image: Course image
+    show:
+      title: Courses details
+      objective: Objective
+      subjects: Subjects
+      trainer: Trainers
+      members: Members
+      schedule: schedule
+      to: to
   sessions:
       new:
         title: Login
@@ -31,3 +39,5 @@ en:
       login_failed: Invalid email/password combination
     users_controller:
       not_logged_in_yet: Please login to continue
+    courses_controller:
+      course_not_found: This course is not available now

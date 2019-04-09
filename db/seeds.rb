@@ -16,8 +16,8 @@ User.create!(name: "Ho Minh Huy",
   password: "11111111",
   password_confirmation: "11111111")
 
-Course.create!(name: "Mysql",
-  description: "Mysql tutorial",
+Course.create!(name: "PHP laravel",
+  description: "laravel tutorial",
   image: "course-2.jpg",
   start_date: Time.now,
   end_date: Time.now + 2.months,
@@ -42,10 +42,58 @@ UserCourse.create!(user_id: 3,
   course_id: 1,
   status: 1)
 
-UserCourse.create!(user_id: 2,
+UserCourse.create!(user_id: 1,
   course_id: 2,
   status: 1)
 
 UserCourse.create!(user_id: 3,
   course_id: 2,
   status: 1)
+
+Subject.create!(
+  name: "GIT",
+  description: "git basic and advance")
+
+Subject.create!(
+  name: "MySQL",
+  description: "mysql basic and advance")
+
+Subject.create!(
+  name: "Ruby",
+  description: "prepare to learn rails")
+
+Subject.create!(
+  name: "Rails",
+  description: "Rails tutorial")
+
+Subject.create!(
+  name: "PHP",
+  description: "prepare to learn Laravel")
+
+Subject.create!(
+  name: "Laravel",
+  description: "Laravel tutorial")
+
+CourseSubject.create!(
+  course_id: 1,
+  subject_id: 1)
+
+CourseSubject.create!(
+  course_id: 1,
+  subject_id: 2)
+
+CourseSubject.create!(
+  course_id: 2,
+  subject_id: 1)
+
+CourseSubject.create!(
+  course_id: 2,
+  subject_id: 2)
+
+CourseSubject.create!(
+  course_id: 2,
+  subject_id: 3)
+
+CourseSubject.create!(
+  course_id: 2,
+  subject_id: 4)

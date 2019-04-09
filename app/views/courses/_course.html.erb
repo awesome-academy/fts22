@@ -3,11 +3,16 @@
     <%= image_tag course.image, size: "360x220", alt: t(".course_image"), class: "course_img" %>
     <div class="hover_text">
       <a href="#">
-        <h4><%= course.name %></h4>
+        <h4><%= link_to course.name, course %></h4>
       </a>
       <ul class="list">
-        <li><a href="#"><i class="lnr lnr-users"></i> 355</a></li>
-        <%= render partial: "trainer", collection: course.users, as: :user %>
+        <li><a href="#"><i class="lnr lnr-users"></i> <%= count_trainee_in course %></a></li>
+        <li>
+          <a href="#">
+            <i class="lnr lnr-user"></i>
+            <%= render partial: "trainer", collection: course.users, as: :user %>
+          </a>
+        </li>
       </ul>
     </div>
   </div>

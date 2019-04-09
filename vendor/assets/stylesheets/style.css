@@ -3178,3 +3178,8 @@ h6 {
 .procedure_hyperlink{
   margin-right: 10%;
 }
+
+.task_select{
+  width: 15%;
+  margin-bottom: 1%;
+}

@@ -9,7 +9,8 @@ Rails.application.routes.draw do
     resources :user_tasks, only: :update
 
     namespace :admin do
-      resources :subjects, except: :show
+      resources :subjects
+      resources :tasks , except: %i(index show new)
     end
   end
 end

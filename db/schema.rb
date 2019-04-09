@@ -43,7 +43,7 @@ ActiveRecord::Schema.define(version: 2019_04_11_024048) do
   create_table "tasks", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
     t.text "description"
-    t.integer "course_subject_id"
+    t.integer "subject_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

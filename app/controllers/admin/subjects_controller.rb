@@ -1,6 +1,7 @@
 class Admin::SubjectsController < Admin::BaseController
   before_action :logged_in_user, :check_is_trainer
   before_action :load_subject, except: %i(index new create)
+  before_action :load_tasks, only: :show
 
   def index
     @subjects = Subject.newest.paginate page: params[:page],
@@ -11,9 +12,9 @@ class Admin::SubjectsController < Admin::BaseController
     @subject = Subject.new
   end
 
-  def edit
-    render :edit
-  end
+  def show; end
+
+  def edit; end
 
   def update
     if @subject.update subject_params
@@ -39,10 +40,10 @@ class Admin::SubjectsController < Admin::BaseController
   def destroy
     if @subject.destroy
       flash[:success] = t "admin.controllers.subjects_controller.delete_success"
-      redirect_to admin_subjects_path
     else
       flash[:danger] = t "admin.controllers.subjects_controller.delete_fail"
     end
+    redirect_to admin_subjects_path
   end
 
   private
@@ -56,5 +57,10 @@ class Admin::SubjectsController < Admin::BaseController
     return if @subject
     flash[:danger] = t "admin.controllers.subjects_controller.subject_not_found"
     redirect_to admin_subjects_path
+  end
+
+  def load_tasks
+    @tasks = @subject.tasks.newest.paginate page: params[:page],
+      per_page: Settings.app.models.task.tasks_per_page
   end
 end

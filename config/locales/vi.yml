@@ -30,9 +30,43 @@ vi:
         back_button: Hủy
         submit_button: Cập nhật
       subject:
+        show: Xem
         edit: Sửa
         delete: Xóa
         delete_confirm: Bạn có chắn chắn muốn xóa?
+      show:
+        title: Danh sách công việc
+        heading: Danh sách công việc
+        name: Tên
+        description: Mô tả
+        created_at: Được tạo
+        procedure: Thao tác
+        new_task_heading: Tạo mới task
+        new_task_submit: Tạo
+        new_task_reset: Đặt lại
+    tasks:
+      edit:
+        title: Chỉnh sửa task
+        heading: Chỉnh sửa task
+        name: Tên
+        description: Mô tả
+        back_button: Hủy
+        submit_button: Gửi
+      show:
+        title: Danh sách công việc
+        heading: Danh sách công việc
+        name: Tên
+        description: Mô tả
+        created_at: Được tạo
+        procedure: Thao tác
+        new_task_heading: Thêm công việc
+        new_task_submit: Tạo
+        new_task_reset: Làm trống
+      task:
+        ago: "%{time_ago} trước"
+        edit: Sửa
+        delete: Xóa
+        delete_confirm: Bạn có muốn xóa?
     controllers:
       subjects_controller:
         subject_not_found: Không tìm thấy môn học này!
@@ -40,6 +74,12 @@ vi:
         updated_success: Sửa thành công!
         delete_success: Xóa thành công!
         delete_fail: Xóa thất bại!
+      tasks_controller:
+        created_success: Thêm thành công!
+        delete_success: Xóa thành công!
+        delete_fail: Xóa thất bại!
+        task_not_found: Không tìm thấy task này!
+        update_success: Cập nhật thành công!
   layouts:
     admin:
       header:
@@ -109,6 +149,7 @@ vi:
       login_failed: Email hoặc mật khẩu không đúng
     users_controller:
       not_logged_in_yet: Vui lòng đăng nhập để tiếp tục
+      not_a_trainer: Bạn không có đủ thẩm quyền cho tác vụ này
     courses_controller:
       course_not_found: Khóa học này không còn tồn tại
     subjects_controller:

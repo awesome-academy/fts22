@@ -4,7 +4,8 @@
   </div>
   <div class="country"><%= subject.description %></div>
   <div class="country">
-    <%= link_to t(".edit"), edit_admin_subject_path(id: subject.id), class: "procedure_hyperlink" %>
+    <%= link_to t(".edit"), edit_admin_subject_path(subject), class: "procedure_hyperlink" %>
+    <%= link_to t(".show"), admin_subject_path(subject), class: "procedure_hyperlink" %>
     <%= link_to t(".delete"), admin_subject_path(subject), method: :delete, data: {confirm: t(".delete_confirm")} %>
   </div>
 </div>

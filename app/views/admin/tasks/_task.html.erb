@@ -1,0 +1,10 @@
+<div class="table-row">
+  <div class="country"><%= task.name %></div>
+  <div class="country"><%= task.description %>
+  </div>
+  <div class="country"><%= t ".ago", time_ago: time_ago_in_words(task.created_at) %></div>
+  <div class="country">
+    <%= link_to t(".edit"), edit_admin_task_path(task), class: "procedure_hyperlink" %>
+    <%= link_to t(".delete"), admin_task_path(task), method: :delete, data: {confirm: t(".delete_confirm")} %>
+  </div>
+</div>

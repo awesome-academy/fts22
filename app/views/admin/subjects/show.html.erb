@@ -1,0 +1,41 @@
+<% provide(:title, t(".title")) %>
+
+<section class="courses_area p_120"></section>
+<div class="container">
+  <h3 class="mb-30 title_color"><%= t".heading" %></h3>
+  <div class="form-group">
+    <p><%= @subject.name %></p>
+  </div>
+  <div class="form-group">
+    <p><%= @subject.description %></p>
+  </div>
+  <div class="progress-table-wrap">
+    <div class="progress-table" id="task_table">
+      <div class="table-head">
+        <div class="country"><%= t".name" %></div>
+        <div class="country"><%= t".description" %></div>
+        <div class="country"><%= t".created_at" %></div>
+        <div class="country"><%= t".procedure" %></div>
+      </div>
+      <%= render @tasks %>
+      <p><%= will_paginate @tasks, class: "apple_pagination" %></p>
+      <hr />
+      <h3 class="mb-30 title_color"><%= t".new_task_heading" %></h3>
+      <%= form_for(@task || Task.new, url: admin_tasks_path) do |f| %>
+        <%= render "shared/error_messages", object: f.object %>
+        <%= f.hidden_field :subject_id, value: @subject.id %>
+        <div class="form-group">
+          <%= f.label :name, t(".name") %>
+          <%= f.text_field :name, class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :description, t(".description") %>
+          <%= f.text_area :description, class: "form-control" %>
+        </div>
+        <%= f.submit t(".new_task_submit"), class: "btn btn-primary" %>
+        <%= f.submit t(".new_task_reset"), class: "btn btn-primary", type: "reset" %>
+      <% end %>
+    </div>
+  </div>
+</div>
+</section>

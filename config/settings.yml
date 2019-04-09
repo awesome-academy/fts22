@@ -15,3 +15,5 @@ app:
       subject_per_page: 4
       name_max_length: 100
       description_max_length: 200
+    task:
+      tasks_per_page: 4

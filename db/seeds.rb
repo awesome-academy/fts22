@@ -87,11 +87,11 @@ CourseSubject.create!(course_id: 1,
 
 Task.create!(name: "chapter 3",
   description: "Static pages",
-  course_subject_id: 1)
+  subject_id: 1)
 
 Task.create!(name: "chapter 4",
   description: "Filling layouts",
-  course_subject_id: 1)
+  subject_id: 1)
 
 UserTask.create!(user_id: 1,
   task_id: 1,

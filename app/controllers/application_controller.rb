@@ -19,6 +19,7 @@ class ApplicationController < ActionController::Base
 
   def check_is_trainer
     return if current_user.trainer?
+    flash[:danger] = t "controllers.users_controller.not_a_trainer"
     redirect_to root_path
   end
 end

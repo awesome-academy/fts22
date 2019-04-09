@@ -1,5 +1,8 @@
 app:
   keep_login: 1
+  tasks:
+    status_default_css_class: "default"
+    default_status_content: "Open"
   models:
     user:
       name_max_length: 50

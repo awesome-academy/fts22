@@ -14,27 +14,34 @@ vi:
     footer:
       title: Hệ thống đào tạo Sun-asterisk
   courses:
-      index:
-        title: Các khóa học
-        heading: Khóa học của tôi
-        course_image: Hình ảnh khóa học
-      show:
-        title: Chi tiết khóa học
-        objective: Mục tiêu khóa học
-        subjects: Môn học
-        trainer: Tên người hướng dẫn
-        members: Thành viên
-        schedule: Lịch trình dự kiến
-        to: đến
-
+    index:
+      title: Các khóa học
+      heading: Khóa học của tôi
+      course_image: Hình ảnh khóa học
+    show:
+      title: Chi tiết khóa học
+      objective: Mục tiêu khóa học
+      subjects: Môn học
+      trainer: Tên người hướng dẫn
+      members: Thành viên
+      schedule: Lịch trình dự kiến
+      to: đến
+  subjects:
+    show:
+      title: Chi tiết môn học
+      heading: Mục tiêu môn học
+      task_name: Tên
+      task_status: Trạng thái
+      task_short_description: Mô tả
+      task_procedure: Thao tác
   sessions:
-      new:
-        title: Đăng nhập
-        heading: Đăng nhập để tiếp tục
-        login_button: Đăng nhập
-        email: Email
-        password: Mật khẩu
-        remember: Giữ tôi đăng nhập
+    new:
+      title: Đăng nhập
+      heading: Đăng nhập để tiếp tục
+      login_button: Đăng nhập
+      email: Email
+      password: Mật khẩu
+      remember: Giữ tôi đăng nhập
   controllers:
     sessions_controller:
       login_failed: Email hoặc mật khẩu không đúng
@@ -42,3 +49,7 @@ vi:
       not_logged_in_yet: Vui lòng đăng nhập để tiếp tục
     courses_controller:
       course_not_found: Khóa học này không còn tồn tại
+    subjects_controller:
+      subject_not_found: Không tìm thấy môn học này!
+      load_task_error: Có lỗi xảy ra khi tải các công việc
+

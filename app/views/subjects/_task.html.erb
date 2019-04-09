@@ -1,0 +1,9 @@
+<div class="table-row">
+  <div class="country"><%= load_task(user_task).name %></div>
+  <div class="country">
+    <span class="label label-<%=add_class_task_status(user_task)[:class]%>">
+      <%= add_class_task_status(user_task)[:content] %>
+    </span>
+  </div>
+  <div class=" country"><%= user_task.short_description %></div>
+</div>

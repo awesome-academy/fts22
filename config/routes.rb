@@ -5,5 +5,6 @@ Rails.application.routes.draw do
     post "/login", to: "sessions#create"
     delete "/logout", to: "sessions#destroy"
     resources :courses, only: %i(index show)
+    resources :subjects, only: :show
   end
 end

@@ -1,0 +1,14 @@
+<div class="grid_item wd44">
+  <div class="courses_item">
+    <%= image_tag course.image, size: "360x220", alt: t(".course_image"), class: "course_img" %>
+    <div class="hover_text">
+      <a href="#">
+        <h4><%= course.name %></h4>
+      </a>
+      <ul class="list">
+        <li><a href="#"><i class="lnr lnr-users"></i> 355</a></li>
+        <%= render partial: "admin", collection: course.users, as: :user %>
+      </ul>
+    </div>
+  </div>
+</div>

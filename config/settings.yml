@@ -6,3 +6,4 @@ app:
       password_max_length: 8
     course:
       name_max_length: 50
+      course_per_page: 1

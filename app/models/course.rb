@@ -1,6 +1,8 @@
 class Course < ApplicationRecord
   has_many :user_courses, dependent: :destroy
   has_many :course_subjects, dependent: :destroy
+  has_many :users, through: :user_courses, source: :user
+  scope :newest, ->{order created_at: :desc}
   validates :name, presence: true,
     length: {maximum: Settings.app.models.course.name_max_length}
   validates :start_date, presence: true,

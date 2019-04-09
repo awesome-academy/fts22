@@ -12,4 +12,5 @@ class User < ApplicationRecord
   validates :password, presence: true,
     length: {minimum: Settings.app.models.user.password_max_length},
     allow_nil: true
+  enum role: {trainee: 0, admin: 1}
 end

@@ -1,0 +1,17 @@
+vi:
+  layouts:
+    header:
+      eng: Tiếng Anh
+      vie: Tiếng Việt
+      home: Trang chủ
+      trainer: Các trainer
+      course: Các khóa học
+      profile: Thông tin
+      logout: Đăng xuất
+    footer:
+      title: Hệ thống đào tạo Sun-asterisk
+  courses:
+      index:
+        title: Các khóa học
+        heading: Khóa học của tôi
+

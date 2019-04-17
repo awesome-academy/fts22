@@ -17,6 +17,7 @@ gem "sass-rails", "~> 5.0"
 gem "sqlite3"
 gem "turbolinks", "~> 5"
 gem "uglifier", ">= 1.3.0"
+gem "will_paginate", "~> 3.1.0"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
@@ -31,8 +32,8 @@ end
 
 group :test do
   gem "capybara", ">= 2.15"
-  gem "chromedriver-helper"
   gem "selenium-webdriver"
+  gem "webdrivers"
 end
 
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]

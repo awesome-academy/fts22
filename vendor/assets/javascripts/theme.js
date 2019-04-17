@@ -109,12 +109,10 @@
     /*  Simple LightBox js
     /*----------------------------------------------------*/
     $('.imageGallery1 .light').simpleLightbox();
-
 	$('.counter').counterUp({
 		delay: 10,
 		time: 1000
 	});
-
 	/*----------------------------------------------------*/
     /*  Testimonials Slider
     /*----------------------------------------------------*/
@@ -135,7 +133,6 @@
         }
     }
     testimonials_slider();
-
 	$(document).ready(function() {
 		$('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
 			disableOn: 700,

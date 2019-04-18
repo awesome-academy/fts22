@@ -44,56 +44,37 @@ UserCourse.create!(user_id: 3,
 
 UserCourse.create!(user_id: 1,
   course_id: 2,
-  status: 1)
+  status: 2)
 
 UserCourse.create!(user_id: 3,
   course_id: 2,
-  status: 1)
+  status: 2)
 
-Subject.create!(
-  name: "GIT",
-  description: "git basic and advance")
-
-Subject.create!(
-  name: "MySQL",
-  description: "mysql basic and advance")
-
-Subject.create!(
-  name: "Ruby",
-  description: "prepare to learn rails")
-
-Subject.create!(
-  name: "Rails",
+Subject.create!(name: "Rails",
   description: "Rails tutorial")
 
-Subject.create!(
-  name: "PHP",
-  description: "prepare to learn Laravel")
-
-Subject.create!(
-  name: "Laravel",
-  description: "Laravel tutorial")
-
-CourseSubject.create!(
-  course_id: 1,
+UserSubject.create!(user_id: 1,
   subject_id: 1)
 
-CourseSubject.create!(
-  course_id: 1,
-  subject_id: 2)
+CourseSubject.create!(course_id: 1,
+  subject_id: 1,
+  start_date: Time.zone.now,
+  working_day: 10)
 
-CourseSubject.create!(
-  course_id: 2,
-  subject_id: 1)
+Task.create!(name: "chapter 3",
+  description: "Static pages",
+  course_subject_id: 1)
 
-CourseSubject.create!(
-  course_id: 2,
-  subject_id: 2)
+Task.create!(name: "chapter 4",
+  description: "Filling layouts",
+  course_subject_id: 1)
 
-CourseSubject.create!(
-  course_id: 2,
-  subject_id: 3)
+UserTask.create!(user_id: 1,
+  task_id: 1,
+  short_description: "pull request https://abc.com/xyz/pull/8",
+  status: 1)
 
-CourseSubject.create!(
-  course_id: 2,
-  subject_id: 4)
+UserTask.create!(user_id: 1,
+  task_id: 2,
+  short_description: "pull request https://abc.com/xyz/pull/9",
+  status: 0)

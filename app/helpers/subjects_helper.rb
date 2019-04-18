@@ -4,16 +4,21 @@ module SubjectsHelper
   end
 
   def add_class_task_status user_task
-    if user_task.open?
-      return {
+    case user_task.status
+    when "in_progress"
+      {class: "primary", content: t(".in_progress")}
+    when "ready"
+      {class: "warning", content: t(".ready")}
+    when "commented"
+      {class: "danger", content: t(".comented")}
+    when "done"
+      {class: "success", content: t(".done")}
+    else
+      {
         class: Settings.app.tasks.status_default_css_class,
         content: Settings.app.tasks.default_status_content
       }
     end
-    return {class: "primary", content: "In progress"} if user_task.in_progress?
-    return {class: "warning", content: "Ready"} if user_task.ready?
-    return {class: "danger", content: "Comented"} if user_task.commented?
-    return {class: "success", content: "Done"} if user_task.done?
   end
 
   def trainee_status_options

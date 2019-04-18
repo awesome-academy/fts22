@@ -16,6 +16,12 @@ User.create!(name: "Ho Minh Huy",
   password: "11111111",
   password_confirmation: "11111111")
 
+User.create!(name: "Vu Thi Tran Van",
+  email: "vu.thi.tran.van@sun-asterisk.com",
+  role: 1,
+  password: "11111111",
+  password_confirmation: "11111111")
+
 Course.create!(name: "PHP laravel",
   description: "laravel tutorial",
   image: "course-2.jpg",
@@ -52,6 +58,24 @@ UserCourse.create!(user_id: 3,
 
 Subject.create!(name: "Rails",
   description: "Rails tutorial")
+
+Subject.create!(name: "Git",
+  description: "Git basic and advance")
+
+Subject.create!(name: "Mysql",
+  description: "MySql basic")
+
+Subject.create!(name: "Ruby",
+  description: "Ruby programing language")
+
+Subject.create!(name: "PHP",
+  description: "PHP programing language")
+
+Subject.create!(name: "Laravel",
+  description: "Laravel quicktasks")
+
+Subject.create!(name: "Devops",
+  description: "Basic command")
 
 UserSubject.create!(user_id: 1,
   subject_id: 1)

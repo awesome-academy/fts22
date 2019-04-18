@@ -1,0 +1,22 @@
+<% provide(:title, t(".title")) %>
+
+<section class="courses_area p_120">
+  <div class="container">
+    <div class="section-top-border">
+      <h3 class="mb-30 title_color"><%= t ".heading" %></h3>
+      <%= link_to t(".new_subject"), new_admin_subject_path, class: "btn btn-primary" %>
+      <div class="progress-table-wrap">
+        <div class="progress-table" id="task_table">
+          <div class="table-head">
+            <div class="country"><%= t ".no" %></div>
+            <div class="country"><%= t ".name" %></div>
+            <div class="country"><%= t ".description" %></div>
+            <div class="country"><%= t ".procedure" %></div>
+          </div>
+          <%= render @subjects %>
+          <p><%= will_paginate @subjects, class: "apple_pagination" %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

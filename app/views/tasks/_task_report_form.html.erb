@@ -1,0 +1,29 @@
+
+<div class="modal fade" id="taskReportForm" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title"><%= t".heading" %></h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <%= form_for(:user_task, url: "", html: {id: "report", method: :patch}) do |f| %>
+          <div class="modal-body">
+            <div class="mt-10">
+              <%= label_tag :status, t(".status_select") %>
+              <%= f.select :status, options_for_select(trainee_status_options), {}, {class: "form-control"} %>
+            </div>
+            <div class="mt-10">
+              <%= label_tag :short_description, t(".task_description_input") %>
+              <%= f.text_area :short_description, placeholder: t(".task_description_input"), class: "single-textarea", required: true %>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <%= f.submit t(".report_button"), class: "btn btn-primary" %>
+            <button type="button" class="btn btn-default" data-dismiss="modal"><%= t".close_button" %></button>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+

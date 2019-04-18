@@ -11,6 +11,12 @@ module SubjectsHelper
       }
     end
     return {class: "primary", content: "In progress"} if user_task.in_progress?
+    return {class: "warning", content: "Ready"} if user_task.ready?
+    return {class: "danger", content: "Comented"} if user_task.commented?
     return {class: "success", content: "Done"} if user_task.done?
+  end
+
+  def trainee_status_options
+    UserTask.statuses.except(:done, :commented).keys
   end
 end

@@ -26,7 +26,12 @@ vi:
         members: Thành viên
         schedule: Lịch trình dự kiến
         to: đến
-
+  users:
+    edit:
+      title: Chỉnh sửa thông tin người dùng
+      title_header: Cập nhật thông tin người dùng
+      change: Thay đổi
+      btn_submit: Lưu thay đổi
   sessions:
       new:
         title: Đăng nhập
@@ -42,3 +47,6 @@ vi:
       not_logged_in_yet: Vui lòng đăng nhập để tiếp tục
     courses_controller:
       course_not_found: Khóa học này không còn tồn tại
+    users_controller:
+      profile_updated: "Thay đổi thông tin thành công"
+      user_not_found: "Người dùng này không tồn tại"

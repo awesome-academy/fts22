@@ -26,6 +26,12 @@ en:
       members: Members
       schedule: schedule
       to: to
+  users:
+    edit:
+      title: Edit user
+      title_header: Update your profile
+      change: Change
+      btn_submit: Save changes  
   sessions:
       new:
         title: Login
@@ -41,3 +47,6 @@ en:
       not_logged_in_yet: Please login to continue
     courses_controller:
       course_not_found: This course is not available now
+    users_controller:
+      profile_updated: "Profile updated"
+      user_not_found: "The user is not available now"

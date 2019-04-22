@@ -12,21 +12,21 @@
 
 ActiveRecord::Schema.define(version: 2019_04_11_024242) do
 
-  create_table "course_subject_tasks", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "course_subject_tasks", force: :cascade do |t|
     t.integer "course_subject_id"
     t.integer "task_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "course_subjects", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "course_subjects", force: :cascade do |t|
     t.integer "course_id"
     t.integer "subject_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "courses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "courses", force: :cascade do |t|
     t.string "name"
     t.text "description"
     t.string "image"
@@ -37,21 +37,21 @@ ActiveRecord::Schema.define(version: 2019_04_11_024242) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "subjects", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "subjects", force: :cascade do |t|
     t.string "name"
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "tasks", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "tasks", force: :cascade do |t|
     t.string "name"
     t.integer "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "user_courses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "user_courses", force: :cascade do |t|
     t.integer "user_id"
     t.integer "course_id"
     t.string "status"
@@ -59,7 +59,7 @@ ActiveRecord::Schema.define(version: 2019_04_11_024242) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "user_subjects", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "user_subjects", force: :cascade do |t|
     t.integer "user_id"
     t.integer "subject_id"
     t.integer "status"
@@ -67,14 +67,14 @@ ActiveRecord::Schema.define(version: 2019_04_11_024242) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "user_tasks", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "user_tasks", force: :cascade do |t|
     t.integer "user_id"
     t.integer "task_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "email"
     t.integer "role", default: 0

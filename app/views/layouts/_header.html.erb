@@ -10,7 +10,7 @@
   <div class="main_menu">
     <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container">
-        <a class="navbar-brand logo_h" href="index.html"><%= image_tag("sun-asterisk-logo.png", size: "170x102",alt: "Sun-asterisk") %></a>
+        <a class="navbar-brand logo_h" href="<%= root_url %>"><%= image_tag("sun-asterisk-logo.png", size: "170x102",alt: "Sun-asterisk") %></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="icon-bar"></span>
@@ -21,14 +21,14 @@
           <ul class="nav navbar-nav menu_nav ml-auto">
             <li class="nav-item"><a class="nav-link" href="index.html"><%= t".home" %></a></li>
             <li class="nav-item"><a class="nav-link" href="about-us.html"><%= t".trainer" %></a></li>
-            <li class="nav-item active"><%= link_to t(".course"), courses_path, class: "nav-link" %></li>
+            <li class="nav-item active"><%= link_to t(".course"), courses_url, class: "nav-link" %></li>
             <% if logged_in? %>
             <li class="nav-item submenu dropdown">
               <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                 aria-expanded="false"><%= current_user.name %></a>
               <ul class="dropdown-menu">
-                <li class="nav-item"><a class="nav-link" href="courses.html"><%= t".profile" %></a>
-                <li class="nav-item"><%= link_to t(".logout"), logout_path, method: :delete, class: "nav-link" %></li>
+                <li class="nav-item"><%= link_to t(".profile"), edit_user_path(current_user), class: "nav-link"%></li>
+                <li class="nav-item"><%= link_to t(".logout"), logout_url, method: :delete, class: "nav-link" %></li>
               </ul>
             </li>
             <% end %>

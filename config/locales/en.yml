@@ -26,6 +26,14 @@ en:
       members: Members
       schedule: schedule
       to: to
+  subjects:
+    show:
+      title: Course details
+      heading: Objective
+      task_name: Task name
+      task_status: Status
+      task_short_description: Short description
+      task_procedure: Procedure
   sessions:
       new:
         title: Login
@@ -41,3 +49,6 @@ en:
       not_logged_in_yet: Please login to continue
     courses_controller:
       course_not_found: This course is not available now
+    subjects_controller:
+      subject_not_found: Subject not found, please try again!
+      load_task_error: Tasks loaded failed!

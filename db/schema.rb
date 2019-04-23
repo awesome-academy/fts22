@@ -67,6 +67,7 @@ ActiveRecord::Schema.define(version: 2019_04_11_024048) do
   create_table "user_tasks", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "user_id"
     t.integer "task_id"
+    t.string "short_description"
     t.integer "status", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

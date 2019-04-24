@@ -1,4 +1,5 @@
 class SubjectsController < ApplicationController
+  before_action :logged_in_user
   before_action :load_subject, :load_tasks, only: :show
 
   def show; end

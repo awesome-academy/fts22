@@ -5,5 +5,11 @@
       <%= add_class_task_status(user_task)[:content] %>
     </span>
   </div>
-  <div class=" country"><%= user_task.short_description %></div>
+  <div class="country" id = "short_description_<%= user_task.id %>"><%= user_task.short_description %></div>
+  <div class="country" >
+    <button class="btn btn-primary"
+      onclick="openReportForm('<%= user_task_path user_task.id %>', '<%= user_task.status %>', '<%= user_task.short_description %>');">
+      <%= t".report_button" %>
+    </button>
+  </div>
 </div>

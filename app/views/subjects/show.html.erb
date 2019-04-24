@@ -12,15 +12,17 @@
   <div class="whole-wrap">
     <div class="container">
       <div class="section-top-border">
-        <h3 class="mb-30 title_color">Task</h3>
+        <h3 class="mb-30 title_color"><%= t".task" %></h3>
         <div class="progress-table-wrap">
           <div class="progress-table" id="task_table">
             <div class="table-head">
               <div class="country"><%= t".task_name" %></div>
               <div class="country"><%= t".task_status" %></div>
               <div class="country"><%= t".task_short_description" %></div>
+              <div class="country"><%= t".task_procedure" %></div>
             </div>
             <%= render partial: "task", collection: @user_tasks, as: :user_task %>
+            <%= render partial: "tasks/task_report_form" %>
           </div>
         </div>
       </div>

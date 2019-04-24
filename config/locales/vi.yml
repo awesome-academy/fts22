@@ -30,10 +30,20 @@ vi:
     show:
       title: Chi tiết môn học
       heading: Mục tiêu môn học
+      task: Công việc
       task_name: Tên
       task_status: Trạng thái
       task_short_description: Mô tả
       task_procedure: Thao tác
+    task:
+      report_button: Báo cáo
+  tasks:
+    task_report_form:
+      heading: Báo cáo
+      status_select: Chọn trạng thái
+      report_button: Gửi
+      task_description_input: Mô tả
+      close_button: Đóng
   sessions:
     new:
       title: Đăng nhập
@@ -52,4 +62,7 @@ vi:
     subjects_controller:
       subject_not_found: Không tìm thấy môn học này!
       load_task_error: Có lỗi xảy ra khi tải các công việc
-
+    user_tasks_controller:
+      update_success: Cập nhật thành công!
+      update_failed: Cập nhật thất bại!
+      user_task_not_found: Công việc không tồn tại!

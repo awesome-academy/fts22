@@ -11,3 +11,4 @@ app:
     course:
       name_max_length: 50
       course_per_page: 1
+    

@@ -30,10 +30,20 @@ en:
     show:
       title: Course details
       heading: Objective
+      task: Tasks
       task_name: Task name
       task_status: Status
       task_short_description: Short description
       task_procedure: Procedure
+    task:
+      report_button: Report
+  tasks:
+    task_report_form:
+      heading: Report
+      status_select: Status
+      report_button: Submit
+      task_description_input: Short description
+      close_button: Close
   sessions:
       new:
         title: Login
@@ -52,3 +62,7 @@ en:
     subjects_controller:
       subject_not_found: Subject not found, please try again!
       load_task_error: Tasks loaded failed!
+    user_tasks_controller:
+      update_success: Update successfully!
+      update_failed: Update failed, please check all information again!
+      user_task_not_found: Task not found!

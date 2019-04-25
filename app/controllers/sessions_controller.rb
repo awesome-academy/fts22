@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
     if user&.authenticate(params[:session][:password])
       log_in user
       remember_or_forget user
-      redirect_back_or root_path unless user.trainer?
+      handle_redirect user
     else
       flash[:danger] = t "controllers.sessions_controller.login_failed"
       redirect_to root_path
@@ -31,6 +31,11 @@ class SessionsController < ApplicationController
   end
 
   private
+
+  def handle_redirect user
+    return redirect_to admin_subjects_path if user.trainer?
+    redirect_back_or root_path
+  end
 
   def check_logged_in
     redirect_to courses_path if logged_in?

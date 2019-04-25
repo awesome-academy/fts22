@@ -3174,3 +3174,7 @@ h6 {
 .alert_panel {
   margin-top: 12%!important;
 }
+
+.procedure_hyperlink{
+  margin-right: 10%;
+}

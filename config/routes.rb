@@ -7,5 +7,9 @@ Rails.application.routes.draw do
     resources :courses, only: %i(index show)
     resources :subjects, only: :show
     resources :user_tasks, only: :update
+
+    namespace :admin do
+      resources :subjects, except: :show
+    end
   end
 end

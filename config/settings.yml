@@ -11,4 +11,7 @@ app:
     course:
       name_max_length: 50
       course_per_page: 1
-    
+    subject:
+      subject_per_page: 4
+      name_max_length: 100
+      description_max_length: 200

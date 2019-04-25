@@ -16,4 +16,9 @@ class ApplicationController < ActionController::Base
     flash[:danger] = t "controllers.users_controller.not_logged_in_yet"
     redirect_to root_path
   end
+
+  def check_is_trainer
+    return if current_user.trainer?
+    redirect_to root_path
+  end
 end

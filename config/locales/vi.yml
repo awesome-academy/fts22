@@ -1,14 +1,62 @@
 vi:
+  errors:
+    one: Có 1 lỗi xảy ra
+    other: Có %{count} lỗi xảy ra
   will_paginate:
     next_label: Trang kế
     previous_label: Trang trước
+  admin:
+    subjects:
+      index:
+        title: Danh sách môn học
+        heading: Danh sách môn học
+        new_subject: Tạo mới
+        no: STT
+        name: Tên môn học
+        description: Mô tả
+        procedure: Thao tác
+      new:
+        title: Tạo mới môn học
+        heading: Tạo mới môn học
+        name: Tên môn học
+        description: Mô tả
+        back_button: Hủy
+        submit_button: Lưu
+      edit:
+        title: Sửa môn học
+        heading: Sửa môn học
+        name: Tên môn học
+        description: Mô tả
+        back_button: Hủy
+        submit_button: Cập nhật
+      subject:
+        edit: Sửa
+        delete: Xóa
+        delete_confirm: Bạn có chắn chắn muốn xóa?
+    controllers:
+      subjects_controller:
+        subject_not_found: Không tìm thấy môn học này!
+        created_success: Thêm thành công!
+        updated_success: Sửa thành công!
+        delete_success: Xóa thành công!
+        delete_fail: Xóa thất bại!
   layouts:
+    admin:
+      header:
+        eng: Tiếng Anh
+        vie: Tiếng Việt
+        subjects: Các môn học
+        profile: Thông tin
+        logout: Đăng xuất
+      footer:
+        title: Hệ thống đào tạo Sun-asterisk
     header:
       eng: Tiếng Anh
       vie: Tiếng Việt
       home: Trang chủ
       trainer: Các trainer
       course: Các khóa học
+      subjects: Các môn học
       profile: Thông tin
       logout: Đăng xuất
     footer:
@@ -37,6 +85,10 @@ vi:
       task_procedure: Thao tác
     task:
       report_button: Báo cáo
+      in_progress: Đang thực hiện
+      ready: Sẵn sàng
+      commented: Có nhận xét
+      done: Hoàn thành
   tasks:
     task_report_form:
       heading: Báo cáo

@@ -1,0 +1,7 @@
+<% if @finish_success_message %>
+  $('#course_subject_status_<%= @course_subject.id %>').html('<%= t ".finished" %>')
+  $('#procedure_buttons_<%= @course_subject.id %>').html('')
+  alert('<%= @finish_success_message %>')
+<% else %>
+  alert('<%= @finish_fail_message %>')
+<% end %>

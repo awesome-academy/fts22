@@ -1,0 +1,6 @@
+<%= link_to t(".start_button"),
+  trainer_start_subject_path(course_subject),
+  class: "btn btn-primary",
+  method: :patch,
+  data: {confirm: t(".start_confirm")},
+  remote: true %>

@@ -1,0 +1,15 @@
+<tr>
+  <td><%= course_subject.subject.name %></td>
+  <td><%= t(".tasks", count: course_subject.tasks.size) %></td>
+  <td id="course_subject_status_<%= course_subject.id %>"><%= course_subject_element(course_subject)[:status] %></td>
+  <td id="procedure_buttons_<%= course_subject.id %>">
+    <% unless course_subject.finished? %>
+      <div id="procedure_button_<%= course_subject.id %>" class="button-display">
+        <%= course_subject_element(course_subject)[:button] %>
+      </div>
+        <%= link_to t(".add_task_button"),
+          trainer_course_subject_path(course_subject),
+          class: "btn btn-danger" %>
+    <% end %>
+  </td>
+</tr>

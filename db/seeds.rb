@@ -4,6 +4,12 @@ User.create!(name: "Vu Phan",
   role: 0,
   password_confirmation: "11111111")
 
+User.create!(name: "Admin",
+  email: "admin@sun-asterisk.com",
+  password: "11111111",
+  role: 1,
+  password_confirmation: "11111111")
+
 User.create!(name: "Bui Lam Quang Ngoc",
   email: "bui.lam.quang.ngoc@sun-asterisk.com",
   role: 0,
@@ -12,13 +18,13 @@ User.create!(name: "Bui Lam Quang Ngoc",
 
 User.create!(name: "Ho Minh Huy",
   email: "ho.minh.huy@sun-asterisk.com",
-  role: 1,
+  role: 2,
   password: "11111111",
   password_confirmation: "11111111")
 
 User.create!(name: "Vu Thi Tran Van",
   email: "vu.thi.tran.van@sun-asterisk.com",
-  role: 1,
+  role: 2,
   password: "11111111",
   password_confirmation: "11111111")
 
@@ -40,10 +46,6 @@ UserCourse.create!(user_id: 1,
   course_id: 1,
   status: 1)
 
-UserCourse.create!(user_id: 2,
-  course_id: 1,
-  status: 1)
-
 UserCourse.create!(user_id: 3,
   course_id: 1,
   status: 1)
@@ -55,6 +57,12 @@ UserCourse.create!(user_id: 1,
 UserCourse.create!(user_id: 3,
   course_id: 2,
   status: 2)
+
+CourseSupervisor.create!(user_id: 4,
+  course_id: 1)
+
+CourseSupervisor.create!(user_id: 4,
+  course_id: 2)
 
 Subject.create!(name: "Rails",
   description: "Rails tutorial")
@@ -83,7 +91,7 @@ UserSubject.create!(user_id: 1,
 CourseSubject.create!(course_id: 1,
   subject_id: 1,
   start_date: Time.zone.now,
-  working_day: 10)
+  end_date: Time.zone.now + 3.days)
 
 Task.create!(name: "chapter 3",
   description: "Static pages",

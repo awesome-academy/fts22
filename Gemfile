@@ -5,9 +5,12 @@ ruby "2.5.1"
 
 gem "bcrypt", "3.1.12"
 gem "bootsnap", ">= 1.1.0", require: false
+gem "carrierwave", "1.1.0"
 gem "coffee-rails", "~> 4.2"
 gem "config"
+gem "fog", "1.40.0"
 gem "jbuilder", "~> 2.5"
+gem "mini_magick", "4.7.0"
 gem "mysql2", ">= 0.4.4", "< 0.6.0"
 gem "puma", "~> 3.11"
 gem "rails", "~> 5.2.2"

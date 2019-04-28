@@ -15,7 +15,8 @@ class User < ApplicationRecord
   validates :password, presence: true,
     length: {minimum: Settings.app.models.user.password_max_length},
     allow_nil: true
-  enum role: {trainee: 0, trainer: 1}
+  enum role: {trainee: 0, admin: 1, trainer: 2}
+  scope :except_user_id, ->(user_id){where.not id: user_id}
 
   def self.digest string
     BCrypt::Password.create(string, cost: User.get_cost)

@@ -5,7 +5,7 @@ class CreateCourseSubjects < ActiveRecord::Migration[5.2]
       t.integer :subject_id
       t.integer :status, default: 0
       t.date :start_date
-      t.integer :working_day
+      t.date :end_date
 
       t.timestamps
     end

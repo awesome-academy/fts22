@@ -14,14 +14,15 @@ class DateValidator < ActiveModel::EachValidator
 
   def handle_after value, record, attribute, comparation_field
     return if value > comparation_field[:value]
-    message = options[:message] || :after
-    record.errors.add attribute, message, date: comparation_field[:field_name]
+    record.errors.add attribute, I18n.t("date_validator.date_after_error"),
+      date: comparation_field[:field_name]
   end
 
   def after_or_equal_to value, record, attribute, comparation_field
     return if value >= comparation_field[:value]
-    message = options[:message] || :after_or_equal_to
-    record.errors.add attribute, message, date: comparation_field[:field_name]
+    record.errors.add attribute,
+      I18n.t("date_validator.date_after_equal_error"),
+      date: comparation_field[:field_name]
   end
 
   protected

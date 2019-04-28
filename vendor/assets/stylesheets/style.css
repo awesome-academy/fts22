@@ -3178,3 +3178,21 @@ h6 {
 .procedure_hyperlink{
   margin-right: 10%;
 }
+
+.button_group{
+  margin-bottom: 10%;
+}
+
+.start_button{
+  margin-left: 45%;
+}
+.start-date-picker{
+  width: 45%;
+  float: left;
+  margin-right: 5%;
+  margin-left: 1%;
+}
+.end-date-picker{
+  width: 45%;
+  float:left;
+}

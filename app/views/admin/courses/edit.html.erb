@@ -1,0 +1,34 @@
+<% provide(:title, t(".title")) %>
+
+<section class="courses_area p_120">
+  <div class="container">
+    <h3 class="mb-30 title_color"><%= t ".heading" %></h3>
+    <%= form_for [:admin, @course] do |f| %>
+      <%= render "shared/error_messages", object: f.object %>
+      <div class="form-group">
+        <%= f.label :name, t(".name") %>
+        <%= f.text_field :name, class: "form-control" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :description, t(".description") %>
+        <%= f.text_area :description, class: "form-control" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :image, t(".image") %>
+        <%= f.file_field :image, accept: "image/jpeg,image/gif,image/png" %>
+      </div>
+      <div class="form-group" style="width: 45%;float: left;margin-right: 5%;margin-left: 1%;">
+        <%= f.label :start_date, t(".start_date") %>
+        <%= f.date_field :start_date, class: "form-control" %>
+      </div>
+      <div class="form-group" style="width: 45%;float:left">
+        <%= f.label :end_date, t(".end_date") %>
+        <%= f.date_field :end_date, class: "form-control" %>
+      </div>
+      <div class="form-group">
+        <%= link_to t(".cancel_button"), admin_courses_path, class: "btn btn-primary" %>
+        <%= f.submit t(".save_button"), class: "btn btn-primary" %>
+      </div>
+    <% end %>
+  </div>
+</section>

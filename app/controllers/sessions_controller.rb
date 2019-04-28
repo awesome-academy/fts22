@@ -33,7 +33,7 @@ class SessionsController < ApplicationController
   private
 
   def handle_redirect user
-    return redirect_to admin_subjects_path if user.trainer?
+    return redirect_to admin_subjects_path if user.admin?
     redirect_back_or root_path
   end
 

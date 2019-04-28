@@ -8,4 +8,5 @@ class Subject < ApplicationRecord
     length: {maximum: Settings.app.models.subject.name_max_length}
   validates :description, presence: true,
     length: {maximum: Settings.app.models.subject.description_max_length}
+  scope :except_subject_id, ->(subject_id){where.not id: subject_id}
 end

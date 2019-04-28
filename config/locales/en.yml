@@ -218,7 +218,7 @@ en:
         start_failed: Subject started failed!
         finish_success: Subject finished successfully!
         finish_failed: Subject finished failed!
-        not_found: Subject not found!
+        subject_not_found: Subject not found!
   layouts:
     admin:
       header:
@@ -264,7 +264,7 @@ en:
       members: Members
       schedule: schedule
       to: to
-  subjects:
+  course_subjects:
     show:
       title: Course details
       heading: Objective
@@ -273,12 +273,23 @@ en:
       task_status: Status
       task_short_description: Short description
       task_procedure: Procedure
-    task:
+      available_tasks: Available tasks
+      no_tasks: no tasks available
+  user_tasks:
+    user_task:
       report_button: Report
       in_progress: In progress
       ready: Ready
       commented: Commented
       done: Done
+      open: Open
+    edit:
+      title: Report
+      heading: Report
+      status_select: Status
+      report_button: Submit
+      task_description_input: Short description
+      close_button: Close
   tasks:
     task_report_form:
       heading: Report
@@ -286,6 +297,8 @@ en:
       report_button: Submit
       task_description_input: Short description
       close_button: Close
+    task:
+      pick_task: Do this task
   sessions:
     new:
       title: Login
@@ -309,4 +322,6 @@ en:
     user_tasks_controller:
       update_success: Update successfully!
       update_failed: Update failed, please check all information again!
+      pick_task_success: Pick task successfully!
+      pick_task_fail: Pick tasks failed!
       user_task_not_found: Task not found!

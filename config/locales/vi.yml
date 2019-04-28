@@ -214,7 +214,7 @@ vi:
         start_failed: Tác vụ thất bại!
         finish_success: Kết thúc môn học thành công!
         finish_failed: Tác vụ thất bại!
-        not_found: Lỗi! Không tìm thấy môn học này!
+        subject_not_found: Lỗi! Không tìm thấy môn học này!
   layouts:
     admin:
       header:
@@ -260,7 +260,7 @@ vi:
       members: Thành viên
       schedule: Lịch trình dự kiến
       to: đến
-  subjects:
+  course_subjects:
     show:
       title: Chi tiết môn học
       heading: Mục tiêu môn học
@@ -269,12 +269,23 @@ vi:
       task_status: Trạng thái
       task_short_description: Mô tả
       task_procedure: Thao tác
-    task:
+      available_tasks: Các công việc chưa thực hiện
+      no_tasks: Không có công việc nào
+  user_tasks:
+    user_task:
       report_button: Báo cáo
       in_progress: Đang thực hiện
       ready: Sẵn sàng
       commented: Có nhận xét
       done: Hoàn thành
+      open: Mở
+    edit:
+      title: Báo cáo
+      heading: Báo cáo
+      status_select: Chọn trạng thái
+      report_button: Gửi
+      task_description_input: Mô tả
+      close_button: Đóng
   tasks:
     task_report_form:
       heading: Báo cáo
@@ -282,6 +293,8 @@ vi:
       report_button: Gửi
       task_description_input: Mô tả
       close_button: Đóng
+    task:
+      pick_task: Thực hiện công việc này
   sessions:
     new:
       title: Đăng nhập
@@ -306,3 +319,5 @@ vi:
       update_success: Cập nhật thành công!
       update_failed: Cập nhật thất bại!
       user_task_not_found: Công việc không tồn tại!
+      pick_task_success: Thao tác thành công!
+      pick_task_fail: Thao tác thất bại!

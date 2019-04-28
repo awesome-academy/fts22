@@ -12,3 +12,12 @@ function openTaskEditForm(updateUrl, name, description) {
   $('#edit_task_name').val(name)
   $('#edit_task_description').val(description)
 }
+
+document.addEventListener('turbolinks:load', function () {
+  if ($('textarea').length > 0) {
+    var data = $('.ckeditor');
+    $.each(data, function (i) {
+      CKEDITOR.replace(data[i].id)
+    })
+  }
+})

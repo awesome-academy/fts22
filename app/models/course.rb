@@ -2,6 +2,7 @@ class Course < ApplicationRecord
   has_many :user_courses, dependent: :destroy
   has_many :course_supervisors, dependent: :destroy
   has_many :users, through: :user_courses
+  has_many :trainers, through: :course_supervisors, source: :user
   has_many :course_subjects, dependent: :destroy
   has_many :subjects, through: :course_subjects
   has_many :tasks, through: :course_subjects

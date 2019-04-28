@@ -40,5 +40,6 @@ class Trainer::CourseSubjectsController < Trainer::BaseController
     return if @course_subject
     flash[:danger] =
       t "trainer.controllers.course_subjects_controller.not_found"
+    redirect_to request.referrer || root_path
   end
 end

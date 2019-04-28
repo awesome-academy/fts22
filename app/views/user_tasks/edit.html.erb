@@ -1,0 +1,23 @@
+<% provide(:title, t(".title")) %>
+
+<section class="courses_area p_120">
+  <div class="container">
+    <h3 class="mb-30 title_color"><%= t ".heading" %></h3>
+    <h4 class="mb-30 title_color"><%= @user_task.task.name %></h4>
+    <%= form_for(@user_task) do |f| %>
+      <%= render "shared/error_messages", object: f.object %>
+      <div class="form-group">
+        <%= label_tag :status, t(".status_select") %>
+        <%= f.select :status, options_for_select(trainee_status_options), {}, {class: "form-control"} %>
+      </div>
+      <div class="form-group">
+        <%= label_tag :short_description, t(".task_description_input") %>
+        <%= f.text_area :short_description, placeholder: t(".task_description_input"), class: "ckeditor", required: true %>
+      </div>
+      <div class="form-group">
+        <%= f.submit t(".report_button"), class: "btn btn-primary" %>
+        <%= link_to t(".close_button"), course_subject_path(@user_task.task.course_subject_id), class: "btn btn-default" %>
+      </div>
+    <% end %>
+  </div>
+</section>

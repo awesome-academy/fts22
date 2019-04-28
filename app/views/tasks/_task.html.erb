@@ -1,0 +1,12 @@
+<div class="table-row">
+  <div class="country"><%= task.name %></div>
+  <div class="country"><%= task.description %>
+  </div>
+  <%= form_for @user_task || UserTask.new, remote: true do |f|%>
+    <div class="country">
+      <%= f.hidden_field :user_id, value: current_user.id %>
+      <%= f.hidden_field :task_id, value: task.id %>
+      <%= f.submit t(".pick_task"), class: "btn-primary" %>
+    </div>
+  <% end %>
+</div>

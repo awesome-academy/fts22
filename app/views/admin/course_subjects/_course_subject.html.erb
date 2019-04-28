@@ -1,0 +1,8 @@
+<tr>
+  <td><%= course_subject.subject.name %></td>
+  <td><%= t ".start_date", start: l(course_subject.start_date, format: :long) %></td>
+  <td><%= t ".end_date", end: l(course_subject.end_date, format: :long) %></td>
+  <td>
+    <%= link_to t(".remove_button"), admin_course_subject_path(course_subject), class: "btn btn-danger", method: :delete, data: {confirm: t(".delete_confirm")}, remote: true %>
+  </td>
+</tr>

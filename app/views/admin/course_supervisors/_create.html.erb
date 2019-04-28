@@ -1,0 +1,6 @@
+<%= form_for @course_supervisor || CourseSupervisor.new, url: admin_course_supervisors_path, remote: true do |f| %>
+  <div id="error"></div>
+  <%= f.select :user_id, options_for_select(load_data_for_selectbox @course.trainers_not_in_course) %>
+  <%= f.hidden_field :course_id, value: @course.id %>
+  <%= f.submit t(".add_button"), class: "btn btn-primary" %>
+<% end %>

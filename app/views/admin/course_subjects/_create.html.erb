@@ -1,0 +1,23 @@
+<hr>
+<h5><%= t ".heading" %></h5>
+<%= form_for @course_subject || CourseSubject.new, url: admin_course_subjects_path, remote: true do |f| %>
+  <div id="course-subject-error"></div>
+  <%= f.hidden_field :course_id, value: @course.id %>
+  <div class="form-group">
+    <%= f.label :subject_id, t(".subject") %>
+    <%= f.select :subject_id, options_for_select(load_data_for_selectbox @course.subjects_not_in_course) %>
+  </div>
+  <div class="form-group">
+    <div class="form-group start-date-picker">
+      <%= f.label :start_date, t(".start_date") %>
+      <%= f.date_field :start_date, class: "form-control" %>
+    </div>
+    <div class="form-group end-date-picker">
+      <%= f.label :end_date, t(".end_date") %>
+      <%= f.date_field :end_date, class: "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+  <%= f.submit t(".add_button"), class: "btn btn-primary" %>
+  </div>
+<% end %>

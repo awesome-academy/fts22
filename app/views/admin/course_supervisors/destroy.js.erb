@@ -1,0 +1,4 @@
+$('#supervisor-list').html('<%= j render @course_supervisor.course.course_supervisors %>');
+$('#course_supervisor_user_id').html('<%= j options_for_select(load_data_for_selectbox @course_supervisor.course.trainers_not_in_course) %>');
+alert('<%= @delete_message %>')
+

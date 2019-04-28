@@ -1,0 +1,3 @@
+$('#subject-list').html('<%= j render @course_subject.course.course_subjects %>');
+$('#course_subject_subject_id').html('<%= j options_for_select(load_data_for_selectbox @course_subject.course.subjects_not_in_course) %>');
+alert('<%= @delete_message %>')

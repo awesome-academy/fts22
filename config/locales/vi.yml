@@ -121,12 +121,117 @@ vi:
         delete_success: Xóa thành công!
         delete_fail: Xóa thất bại!
         course_subject_not_found: Lỗi, không tìm thấy môn học này!
+  trainer:
+    courses:
+      index:
+        title: Các khóa học
+        new: Tạo mới
+        name: Tên
+        description: Mô tả
+        schedule: thời gian dự kiến
+        status: Trạng thái
+        procedure: Thao tác
+        heading_trainer: Danh sách khóa học
+      show:
+        title: Tùy chỉnh
+        heading: Thông tin khóa học
+        name: Khóa học
+        date: Bắt đầu từ %{start} đến %{end}
+        description: Mô tả
+        trainees: Các sinh viên của khóa học
+        subjects: Danh sách môn học của khóa học
+        start_button: Bắt đầu khóa học này
+        start_course_confirm: Bạn có chắc chắn muốn bắt đầu khóa học này?
+      course:
+        setting: Tùy chỉnh
+    user_courses:
+      create:
+        heading: Thêm sinh viên vào khóa học này
+        add_button: Thêm
+      user_course:
+        remove_button: Xóa
+        delete_confirm: Bạn có muốn xóa?
+    course_subjects:
+      course_subject:
+        tasks:
+          one: "%{count} công việc"
+          other: "%{count} công việc"
+        add_task_button: Thêm công việc
+        open: Mở
+        started: Đã bắt đầu
+        finished: Đã kết thúc
+      finish_subject:
+        finished: Đã kết thúc
+      start_subject:
+        started: Đã bắt đầu
+      show:
+        title: Thêm công việc
+        heading: Danh sách công việc
+        name: Tên công việc
+        description: Mô tả
+        created_at: Được tạo
+        procedure: Thao tác
+      finish_subject_button:
+        finish_button: Kết thúc môn học
+        start_confirm: Bạn chắc chứ?
+      start_subject_button:
+        start_confirm: Bạn chắc chứ?
+        start_button: Bắt đầu môn học
+    tasks:
+      task:
+        ago: "%{time_ago} trước"
+        edit: Sửa
+        delete: Xóa
+        delete_confirm: Bạn có chắc chắn muốn xóa?
+      create:
+        name: Tên công việc
+        description: Mô tả
+        new_task_heading: Thêm mới công việc
+        new_task_submit: Thêm
+        new_task_reset: Đặt lại
+      edit:
+        heading: Chỉnh sửa task
+        name: Tên
+        description: Mô tả
+        submit: Cập nhật
+        close_button: Đóng
+    controllers:
+      user_courses_controller:
+        created_success: Thêm thành công!
+        delete_success: Xóa thành công!
+        delete_fail: Xóa thất bại!
+        not_found: Lỗi, không tìm thấy người dùng này!
+      tasks_controller:
+        add_success: Thêm thành công!
+        delete_success: Xóa thành công!
+        delete_failed: Xóa thất bại!
+        edit_success: Cập nhật thành công!
+        not_found: Lỗi, không tìm thấy task này!
+      courses_controller:
+        course_not_found: Lỗi, không tìm thấy khóa học này!
+      course_subjects_controller:
+        start_success: Bắt đầu môn học thành công!
+        start_failed: Tác vụ thất bại!
+        finish_success: Kết thúc môn học thành công!
+        finish_failed: Tác vụ thất bại!
+        not_found: Lỗi! Không tìm thấy môn học này!
   layouts:
     admin:
       header:
         eng: Tiếng Anh
         vie: Tiếng Việt
         subjects: Các môn học
+        courses: Các khóa học
+        profile: Thông tin
+        logout: Đăng xuất
+      footer:
+        title: Hệ thống đào tạo Sun-asterisk
+    trainer:
+      header:
+        eng: Tiếng Anh
+        vie: Tiếng Việt
+        subjects: Các môn học
+        courses: Các khóa học
         profile: Thông tin
         logout: Đăng xuất
       footer:
@@ -191,6 +296,7 @@ vi:
     users_controller:
       not_logged_in_yet: Vui lòng đăng nhập để tiếp tục
       not_admin: Bạn không có đủ quyền để thực hiện điều này
+      not_trainer: Bạn phải là trainer để thực hiện chức năng này
     courses_controller:
       course_not_found: Khóa học này không còn tồn tại
     subjects_controller:

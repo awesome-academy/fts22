@@ -1,0 +1,7 @@
+<% if @delete_success_message %>
+  $('#trainee-list').html('<%= j render @user_course.course.user_courses %>');
+  $('#user_course_user_id').html('<%= escape_javascript options_for_select(load_data_for_selectbox @user_course.course.trainees_not_in_course) %>');
+  alert('<%= @delete_success_message %>')
+<% else %>
+  alert('<%= @delete_fail_message %>')
+<% end %>

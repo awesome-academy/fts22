@@ -122,12 +122,120 @@ en:
         delete_success: Deleted successfully!
         delete_fail: Deleted failed!
         course_subject_not_found: Error, this cannot be found!
+  trainer:
+    courses:
+      index:
+        title: Courses
+        course_image: Course image
+        heading_trainer: Course list
+        new: New course
+        name: Name
+        description: Description
+        schedule: Schedule
+        status: Status
+        procedure: Procedure
+      show:
+        title: Custom course
+        heading: Course information
+        date: Start from %{start} to %{end}
+        name: Course name
+        trainees: List of Trainees
+        subjects: List of Subjects
+        start_button: Start this course
+        start_course_confirm: Make sure you check all the information carefully, this can not be undone.
+      course:
+        setting: Setting
+    user_courses:
+      create:
+        heading: assign trainee to this course
+        add_button: Add
+      user_course:
+        remove_button: Remove
+        delete_confirm: You sure?
+    course_subjects:
+      course_subject:
+        tasks:
+          one: "%{count} task"
+          other: "%{count} tasks"
+        add_task_button: Add task
+        open: Open
+        started: Started
+        finished: Finished
+      finish_subject:
+        finished: Finished
+      start_subject:
+        started: Started
+      show:
+        title: Task management
+        heading: Tasks list
+        name: Task name
+        description: Description
+        created_at: Created at
+        procedure: Procedure
+        new_task_heading: Add new task
+        new_task_submit: Add
+        new_task_reset: Reset
+      finish_subject_button:
+        finish_button: Finish subject
+        start_confirm: You sure?
+      start_subject_button:
+        start_confirm: You sure?
+        start_button: Start subject
+    tasks:
+      task:
+        ago: "%{time_ago} ago"
+        edit: Edit
+        delete: Delete
+        delete_confirm: You sure?
+      create:
+        name: Task name
+        description: Description
+        new_task_heading: Add new task
+        new_task_submit: Add
+        new_task_reset: Reset
+      edit:
+        heading: Edit task
+        name: Task name
+        description: Description
+        submit: Update
+        close_button: Close
+    controllers:
+      user_courses_controller:
+        created_success: Trainee assigned successfully!
+        delete_success: Remove trainee successfully!
+        delete_fail: Remove trainee failed!
+        not_found: Error, user not found!
+      tasks_controller:
+        add_success: Task added successfully!
+        delete_success: Task deleted successfully!
+        delete_failed: Task deleted failed!
+        edit_success: Task updated successfully!
+        not_found: Task not found!
+      courses_controller:
+        course_not_found: Course not found!
+      course_subjects_controller:
+        start_success: Subject started successfully!
+        start_failed: Subject started failed!
+        finish_success: Subject finished successfully!
+        finish_failed: Subject finished failed!
+        not_found: Subject not found!
   layouts:
     admin:
       header:
         eng: English
         vie: Vietnamese
         subjects: Subjects
+        courses: Courses
+        profile: Profile
+        logout: Log out
+      footer:
+        title: Sun asterisk training system
+    trainer:
+      header:
+        eng: English
+        vie: Vietnamese
+        subjects: Subjects
+        courses: Courses
         profile: Profile
         logout: Log out
       footer:
@@ -192,6 +300,7 @@ en:
     users_controller:
       not_logged_in_yet: Please login to continue
       not_admin: You have no right to do this!
+      not_trainer: You must be a trainer to do this
     courses_controller:
       course_not_found: This course is not available now
     subjects_controller:

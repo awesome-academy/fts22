@@ -1,8 +1,10 @@
 class User < ApplicationRecord
   has_many :user_courses, dependent: :destroy
+  has_many :course_supervisors, dependent: :destroy
   has_many :user_subjects, dependent: :destroy
   has_many :user_tasks, dependent: :destroy
   has_many :courses, through: :user_courses
+  has_many :trainer_courses, through: :course_supervisors, source: :course
   has_many :subjects, through: :user_subjects
   has_many :tasks, through: :user_tasks
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i

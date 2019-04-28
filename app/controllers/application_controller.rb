@@ -17,9 +17,15 @@ class ApplicationController < ActionController::Base
     redirect_to root_path
   end
 
-  def check_is_admin
+  def is_admin?
     return if current_user.admin?
     flash[:danger] = t "controllers.users_controller.not_admin"
+    redirect_to root_path
+  end
+
+  def is_trainer?
+    return if current_user.trainer?
+    flash[:danger] = t "controllers.users_controller.not_trainer"
     redirect_to root_path
   end
 end

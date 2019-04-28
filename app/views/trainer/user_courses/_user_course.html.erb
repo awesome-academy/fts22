@@ -1,0 +1,7 @@
+<tr>
+  <td><%= user_course.user.name %></td>
+  <td><%= user_course.status %></td>
+  <td>
+    <%= link_to t(".remove_button"), trainer_user_course_path(user_course), class: "btn btn-danger", method: :delete, data: {confirm: t(".delete_confirm")}, remote: true %>
+  </td>
+</tr>

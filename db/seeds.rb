@@ -16,6 +16,24 @@ User.create!(name: "Bui Lam Quang Ngoc",
   password: "11111111",
   password_confirmation: "11111111")
 
+User.create!(name: "Pham Xuan Nam",
+  email: "pham.xuan.nam@sun-asterisk.com",
+  role: 0,
+  password: "11111111",
+  password_confirmation: "11111111")
+
+User.create!(name: "Nguyen Van Luc",
+  email: "nguyen.van.luc@sun-asterisk.com",
+  role: 0,
+  password: "11111111",
+  password_confirmation: "11111111")
+
+User.create!(name: "Ton That Nhat Quan",
+  email: "ton.that.nhat.quan@sun-asterisk.com",
+  role: 0,
+  password: "11111111",
+  password_confirmation: "11111111")
+
 User.create!(name: "Ho Minh Huy",
   email: "ho.minh.huy@sun-asterisk.com",
   role: 2,
@@ -28,17 +46,29 @@ User.create!(name: "Vu Thi Tran Van",
   password: "11111111",
   password_confirmation: "11111111")
 
+User.create!(name: "Pham Van Chien",
+  email: "pham.van.chien@sun-asterisk.com",
+  role: 2,
+  password: "11111111",
+  password_confirmation: "11111111")
+
+User.create!(name: "Do Thi Diem Thao",
+  email: "do.thi.diem.thao@sun-asterisk.com",
+  role: 2,
+  password: "11111111",
+  password_confirmation: "11111111")
+
 Course.create!(name: "PHP laravel",
   description: "laravel tutorial",
   image: "course-2.jpg",
-  start_date: Time.now,
+  start_date: Time.now + 1.day,
   end_date: Time.now + 2.months,
   status: 0)
 
 Course.create!(name: "Ruby on rails",
   description: "Ruby on rails tutorial",
   image: "course-4.jpg",
-  start_date: Time.now,
+  start_date: Time.now + 1.day,
   end_date: Time.now + 2.months,
   status: 1)
 
@@ -58,10 +88,10 @@ UserCourse.create!(user_id: 3,
   course_id: 2,
   status: 2)
 
-CourseSupervisor.create!(user_id: 4,
+CourseSupervisor.create!(user_id: 7,
   course_id: 1)
 
-CourseSupervisor.create!(user_id: 4,
+CourseSupervisor.create!(user_id: 7,
   course_id: 2)
 
 Subject.create!(name: "Rails",
@@ -90,7 +120,7 @@ UserSubject.create!(user_id: 1,
 
 CourseSubject.create!(course_id: 1,
   subject_id: 1,
-  start_date: Time.zone.now,
+  start_date: Time.zone.now + 1.day,
   end_date: Time.zone.now + 3.days)
 
 Task.create!(name: "chapter 3",

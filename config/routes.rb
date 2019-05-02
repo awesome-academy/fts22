@@ -10,6 +10,9 @@ Rails.application.routes.draw do
 
     namespace :admin do
       resources :subjects, except: :show
+      resources :courses
+      resources :course_supervisors, only: %i(create destroy)
+      resources :course_subjects, only: %i(create destroy)
     end
   end
 end

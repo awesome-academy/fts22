@@ -1,4 +1,7 @@
 vi:
+  date_validator:
+    date_after_error: không hợp lệ
+    date_after_equal_error: không hợp lệ
   errors:
     one: Có 1 lỗi xảy ra
     other: Có %{count} lỗi xảy ra
@@ -33,6 +36,68 @@ vi:
         edit: Sửa
         delete: Xóa
         delete_confirm: Bạn có chắn chắn muốn xóa?
+    courses:
+      index:
+        title: Các khóa học
+        new: Tạo mới
+        name: Tên
+        description: Mô tả
+        schedule: thời gian dự kiến
+        status: Trạng thái
+        image: Hình ảnh
+        procedure: Thao tác
+        heading_trainer: Danh sách khóa học
+      course:
+        delete: Xóa
+        edit: Sửa
+        setting: Tùy chỉnh
+        delete_confirm: Bạn có muốn xóa?
+      new:
+        title: Tạo mới
+        heading: Tạo mới khóa học
+        name: Tên khóa học
+        description: Mô tả
+        image: Hình ảnh
+        cancel_button: Hủy
+        save_button: Tạo
+      edit:
+        title: Sửa thông tin
+        heading: Sửa thông tin khóa học
+        name: Tên khóa học
+        description: Mô tả
+        image: Hình ảnh
+        cancel_button: Hủy
+        save_button: Cập nhật
+      show:
+        title: Tùy chỉnh
+        heading: Thông tin khóa học
+        name: Khóa học
+        date: Bắt đầu từ %{start} đến %{end}
+        description: Mô tả
+        trainers: Các giảng viên của khóa học
+        subjects: Danh sách môn học của khóa học
+        start_button: Bắt đầu khóa học này
+        start_course_confirm: Bạn có chắc chắc bắt đầu khóa học này?
+    course_supervisors:
+      create:
+        add_button: Thêm
+      course_supervisor:
+        remove_button: Xóa
+        delete_confirm: Bạn có muốn xóa không?
+    course_subjects:
+      course_subject:
+          start_date: bắt đầu %{start}
+          end_date: kết thúc %{end}
+          remove_button: Xóa
+          delete_confirm: Bạn có muốn xóa không?
+      create:
+        heading: Thêm môn học vào khóa học
+        subject: Môn học
+        start_date: Ngày bắt đầu
+        end_date: Ngày kết thúc
+        add_button: Thêm
+      course_supervisor:
+        remove_button: Xóa
     controllers:
       subjects_controller:
         subject_not_found: Không tìm thấy môn học này!
@@ -40,6 +105,16 @@ vi:
         updated_success: Sửa thành công!
         delete_success: Xóa thành công!
         delete_fail: Xóa thất bại!
+      courses_controller:
+        add_success: Thêm thành công
+        update_success: Sửa thành công
+        delete_success: Xóa thành công
+        delete_fail: Xóa thất bại
+        course_not_found: Không tìm thấy khóa học này
+      course_supervisors_controller:
+        created_success: Thêm thành công!
+      course_subjects_controller:
+        created_success: Thêm thành công!
   layouts:
     admin:
       header:
@@ -109,6 +184,7 @@ vi:
       login_failed: Email hoặc mật khẩu không đúng
     users_controller:
       not_logged_in_yet: Vui lòng đăng nhập để tiếp tục
+      not_admin: Bạn không có đủ quyền để thực hiện điều này
     courses_controller:
       course_not_found: Khóa học này không còn tồn tại
     subjects_controller:

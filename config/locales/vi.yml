@@ -113,8 +113,14 @@ vi:
         course_not_found: Không tìm thấy khóa học này
       course_supervisors_controller:
         created_success: Thêm thành công!
+        delete_success: Xóa thành công!
+        delete_fail: Xóa thất bại!
+        supervisor_not_found: Lỗi, không tìm thấy trainer này!
       course_subjects_controller:
         created_success: Thêm thành công!
+        delete_success: Xóa thành công!
+        delete_fail: Xóa thất bại!
+        course_subject_not_found: Lỗi, không tìm thấy môn học này!
   layouts:
     admin:
       header:

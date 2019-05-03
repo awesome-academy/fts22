@@ -1,0 +1,6 @@
+<tr>
+  <td><%= course_supervisor.user.name %></td>
+  <td>
+    <%= link_to t(".remove_button"), admin_course_supervisor_path(course_supervisor), class: "btn btn-danger", method: :delete, data: {confirm: t(".delete_confirm")}, remote: true %>
+  </td>
+</tr>

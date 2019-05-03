@@ -114,8 +114,14 @@ en:
         course_not_found: Course not found!
       course_supervisors_controller:
         created_success: Supervisor assigned successfully!
+        delete_success: Deleted successfully!
+        delete_fail: Deleted failed!
+        supervisor_not_found: Error, this cannot be found!
       course_subjects_controller:
         created_success: Subject added successfully!
+        delete_success: Deleted successfully!
+        delete_fail: Deleted failed!
+        course_subject_not_found: Error, this cannot be found!
   layouts:
     admin:
       header:

@@ -1,0 +1,8 @@
+<% if @success_adding_message %>
+  $('#supervisor-list').html('<%= j render @course_supervisor.course.course_supervisors %>');
+  $('#course_supervisor_user_id').html('<%= escape_javascript options_for_select(load_data_for_selectbox @course_supervisor.course.trainers_not_in_course) %>');
+  $('#error').html('');
+  alert('<%= @success_adding_message %>');
+<% else %>
+  $('#error').html('<%= j render "shared/error_messages", object: @course_supervisor %>');
+<% end %>

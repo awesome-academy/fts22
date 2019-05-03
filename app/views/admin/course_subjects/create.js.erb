@@ -1,0 +1,8 @@
+<% if @success_adding_message %>
+  $('#subject-list').html('<%= j render @course_subject.course.course_subjects %>');
+  $('#course_subject_subject_id').html('<%= escape_javascript options_for_select(load_data_for_selectbox @course_subject.course.subjects_not_in_course) %>');
+  $('#course-subject-error').html('');
+  alert('<%= @success_adding_message %>');
+<% else %>
+  $('#course-subject-error').html('<%= j render "shared/error_messages", object: @course_subject %>');
+<% end %>

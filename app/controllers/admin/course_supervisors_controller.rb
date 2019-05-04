@@ -1,5 +1,5 @@
 class Admin::CourseSupervisorsController < Admin::BaseController
-  before_action :logged_in_user, :check_is_admin
+  before_action :logged_in_user, :is_admin?
   before_action :load_course_supervisor, only: :destroy
 
   def create

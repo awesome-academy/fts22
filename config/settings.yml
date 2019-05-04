@@ -1,8 +1,14 @@
 app:
+  default_image: "course-2.jpg"
   keep_login: 1
+  course_subject:
+    status:
+      started: 1
+      finished: 2
   tasks:
     status_default_css_class: "default"
     default_status_content: "Open"
+    tasks_per_page: 5
   models:
     user:
       name_max_length: 50

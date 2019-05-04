@@ -6,4 +6,8 @@ class Task < ApplicationRecord
     lambda do |user_id|
       joins(:user_tasks).where "user_tasks.user_id = ?", user_id
     end)
+  validates :name, presence: true,
+    length: {maximum: Settings.app.models.course.name_max_length}
+  validates :description, presence: true,
+    length: {maximum: Settings.app.models.course.name_max_length}
 end

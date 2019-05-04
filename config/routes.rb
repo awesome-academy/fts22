@@ -14,5 +14,11 @@ Rails.application.routes.draw do
       resources :course_supervisors, only: %i(create destroy)
       resources :course_subjects, only: %i(create destroy)
     end
+
+    namespace :trainer do
+      resources :courses, only: %i(index show)
+      resources :user_courses, only: %i(create destroy)
+      resources :course_subjects, only: %i(show update)
+    end
   end
 end

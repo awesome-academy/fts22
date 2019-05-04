@@ -1,0 +1,40 @@
+<% provide(:title, t(".title")) %>
+
+<section class="courses_area p_120">
+  <div class="container title_color">
+    <h2 class="mb-30 title_color"><%= t ".heading" %></h2>
+    <p>
+      <h3><%= t ".name" %> : <%= @course.name %></h3>
+    </p>
+    <p>
+      <h4><%= @course.description %></h4>
+    </p>
+    <p>
+      <h4><%= t ".date", start: l(@course.start_date, format: :long), end: l(@course.end_date, format: :long) %></h4>
+    </p>
+    <br />
+    <div class="form-group">
+      <a data-toggle="collapse" data-target="#trainee" href="#"><%= t ".trainees" %></a>
+      <div id="trainee" class="collapse">
+        <table class="table table-condensed">
+          <tbody id="trainee-list">
+            <%= render @course.user_courses %>
+          </tbody>
+        </table>
+        <div class="form-group" id="add-supervisor">
+          <%= render "trainer/user_courses/create" %>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <a data-toggle="collapse" data-target="#subject" href="#"><%= t ".subjects" %></a>
+      <div id="subject" class="collapse">
+        <table class="table table-condensed">
+          <tbody id="subject-list">
+            <%= render @course.course_subjects %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>

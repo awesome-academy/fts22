@@ -1,0 +1,9 @@
+<div class="table-row">
+  <div class="country"><%= course.name %></div>
+  <div class="country"><%= course.description %></div>
+  <div class="country"><%= course.start_date %> to <%= course.end_date %></div>
+  <div class="country"><%= course.status %></div>
+  <div class="country">
+    <%= link_to t(".setting"), trainer_course_path(course.id), class: "procedure_hyperlink" %>
+  </div>
+</div>

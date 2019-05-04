@@ -1,0 +1,8 @@
+<% if @success_adding_message %>
+  $('#trainee-list').html('<%= j render @user_course.course.user_courses %>');
+  $('#user_course_user_id').html('<%= j options_for_select(load_data_for_selectbox @user_course.course.trainees_not_in_course) %>');
+  $('#add-trainee-error').html('');
+  alert('<%= @success_adding_message %>');
+<% else %>
+  $('#add-trainee-error').html('<%= j render "shared/error_messages", object: @user_course %>');
+<% end %>

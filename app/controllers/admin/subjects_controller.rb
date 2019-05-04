@@ -1,5 +1,5 @@
 class Admin::SubjectsController < Admin::BaseController
-  before_action :logged_in_user, :check_is_admin
+  before_action :logged_in_user, :is_admin?
   before_action :load_subject, except: %i(index new create)
 
   def index

@@ -1,0 +1,32 @@
+<header class="header_area">
+  <div class="top_menu row m0">
+    <div class="container">
+      <div class="float-right">
+        <%= link_to t(".eng"), locale:"en" %> |
+        <%= link_to t(".vie"), locale:"vi"%>
+      </div>
+    </div>
+  </div>
+  <div class="main_menu">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container">
+        <a class="navbar-brand logo_h" href="index.html"><%= image_tag("sun-asterisk-logo.png", size: "170x102",alt: "Sun-asterisk") %></a>
+        <% if logged_in? %>
+          <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+            <ul class="nav navbar-nav menu_nav ml-auto">
+              <li class="nav-item active"><%= link_to t(".courses"), trainer_courses_path, class: "nav-link" %></li>
+              <li class="nav-item submenu dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                  aria-expanded="false"><%= current_user.name %></a>
+                <ul class="dropdown-menu">
+                  <li class="nav-item"><a class="nav-link" href="courses.html"><%= t".profile" %></a>
+                  <li class="nav-item"><%= link_to t(".logout"), logout_path, method: :delete, class: "nav-link" %></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        <% end %>
+      </div>
+    </nav>
+  </div>
+</header>

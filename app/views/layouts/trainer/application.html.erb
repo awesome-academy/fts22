@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title><%= yield(:title) %></title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track": "reload" %>
+  <%= javascript_include_tag "application", "data-turbolinks-track": "reload" %>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" href="img/favicon.png" type="image/png">
+</head>
+
+<body>
+  <%= render "layouts/trainer/header" %>
+  <%= render partial: "layouts/trainer/message", collection: flash, as: :flash %>
+  <%= yield %>
+  <%= render "layouts/trainer/footer" %>
+</body>
+
+</html>

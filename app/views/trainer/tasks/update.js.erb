@@ -1,0 +1,8 @@
+<% if @edit_message %>
+  alert('<%= @edit_message %>')
+  $('#edit-task-error').html('')
+  $('#task-list').html('<%= j render @tasks %>')
+  $('#task-edit-form').modal('toggle');
+<% else %>
+  $('#edit-task-error').html('<%= j render "shared/error_messages", object: @task %>')
+<% end %>

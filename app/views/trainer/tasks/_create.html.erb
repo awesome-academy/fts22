@@ -1,0 +1,16 @@
+<h3 class="mb-30 title_color"><%= t".new_task_heading" %></h3>
+<%= form_for @task || Task.new, url: trainer_tasks_path, remote: true do |f| %>
+  <div id="adding-task-error">
+  </div>
+  <%= f.hidden_field :course_subject_id, value: @course_subject.id %>
+  <div class="form-group">
+    <%= f.label :name, t(".name") %>
+    <%= f.text_field :name, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :description, t(".description") %>
+    <%= f.text_area :description, class: "form-control" %>
+  </div>
+  <%= f.submit t(".new_task_submit"), class: "btn btn-primary" %>
+  <%= f.submit t(".new_task_reset"), class: "btn btn-primary", type: "reset" %>
+<% end %>

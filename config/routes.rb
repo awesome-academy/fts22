@@ -18,7 +18,10 @@ Rails.application.routes.draw do
     namespace :trainer do
       resources :courses, only: %i(index show)
       resources :user_courses, only: %i(create destroy)
-      resources :course_subjects, only: %i(show update)
+      resources :course_subjects, only: %i(show)
+      resources :tasks, except: %i(index new)
+      patch "/start-subject/:id", to: "course_subjects#start_subject", as: "start_subject"
+      patch "/finish-subject/:id", to: "course_subjects#finish_subject", as: "finish_subject"
     end
   end
 end

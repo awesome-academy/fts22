@@ -1,0 +1,30 @@
+<% provide(:title, t(".title")) %>
+
+<section class="courses_area p_120"></section>
+<div class="container">
+  <h3 class="mb-30 title_color"><%= t".heading" %></h3>
+  <div class="form-group">
+    <p><%= @course_subject.subject.name %></p>
+  </div>
+  <div class="form-group">
+    <p><%= @course_subject.subject.description %></p>
+  </div>
+  <div class="progress-table-wrap">
+    <div class="progress-table" id="task_table">
+      <div class="table-head">
+        <div class="country"><%= t".name" %></div>
+        <div class="country"><%= t".description" %></div>
+        <div class="country"><%= t".created_at" %></div>
+        <div class="country"><%= t".procedure" %></div>
+      </div>
+      <div id="task-list">
+        <%= render @tasks %>
+      </div>
+      <p><%= will_paginate @tasks, class: "apple_pagination" %></p>
+      <hr />
+      <%= render "trainer/tasks/create" %>
+      <%= render "trainer/tasks/edit" %>
+    </div>
+  </div>
+</div>
+</section>

@@ -1,0 +1,13 @@
+<div class="table-row">
+  <div class="country"><%= task.name %></div>
+  <div class="country"><%= task.description %>
+  </div>
+  <div class="country"><%= t ".ago", time_ago: time_ago_in_words(task.created_at) %></div>
+  <div class="country">
+    <a onclick="openTaskEditForm('<%= trainer_task_path(task) %>', '<%= task.name %>', '<%= task.description %>');"
+      class="procedure_hyperlink" href="javascript:void(0)">
+      <%= t(".edit") %>
+    </a>
+    <%= link_to t(".delete"), trainer_task_path(task), method: :delete, data: {confirm: t(".delete_confirm")}, remote: true %>
+  </div>
+</div>

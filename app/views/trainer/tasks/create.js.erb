@@ -1,0 +1,7 @@
+<% if @add_message %>
+  alert('<%= @add_message %>')
+  $('#adding-task-error').html('')
+  $('#task-list').html('<%= j render @tasks %>')
+<% else %>
+  $('#adding-task-error').html('<%= j render "shared/error_messages", object: @task %>')
+<% end %>

@@ -8,4 +8,5 @@ class CourseSubject < ApplicationRecord
     date: {after_or_equal_to: Time.now}
   validates :end_date, presence: true,
     date: {after: :start_date}
+  enum status: {open: 0, started: 1, finished: 2}
 end

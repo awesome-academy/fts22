@@ -6,6 +6,7 @@
     <div class="country">
       <%= f.hidden_field :user_id, value: current_user.id %>
       <%= f.hidden_field :task_id, value: task.id %>
+      <%= hidden_field_tag :course_subject, course_subject.id  %>
       <%= f.submit t(".pick_task"), class: "btn-primary" %>
     </div>
   <% end %>

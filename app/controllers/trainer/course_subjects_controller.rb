@@ -8,6 +8,13 @@ class Trainer::CourseSubjectsController < Trainer::BaseController
   end
 
   def start_subject
+    unless @course_subject.course.start?
+      @start_fail_message =
+        t "trainer.controllers.course_subjects_controller.course_not_started"
+      respond_to do |format|
+        format.js
+      end
+    end
     if @course_subject.started!
       @start_success_message =
         t "trainer.controllers.course_subjects_controller.start_success"

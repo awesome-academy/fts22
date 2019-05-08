@@ -2,6 +2,11 @@ vi:
   date_validator:
     date_after_error: không hợp lệ
     date_after_equal_error: không hợp lệ
+  course_subject:
+    date_duplicate: trùng với môn học %{name}
+  user_course:
+    user_not_found: không tồn tại
+    user_aready_in_opened_course: đã ở trong một khóa học đang bắt đầu
   errors:
     one: Có 1 lỗi xảy ra
     other: Có %{count} lỗi xảy ra
@@ -215,6 +220,7 @@ vi:
         finish_success: Kết thúc môn học thành công!
         finish_failed: Tác vụ thất bại!
         subject_not_found: Lỗi! Không tìm thấy môn học này!
+        course_not_started: Khóa học chưa bắt đầu hoặc đã kết thúc\
   layouts:
     admin:
       header:

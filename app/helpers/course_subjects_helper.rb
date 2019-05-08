@@ -26,7 +26,9 @@ module CourseSubjectsHelper
   end
 
   def display_tasks tasks
-    return render tasks if @course_subject.started? && !tasks.empty?
+    if @course_subject.started? && !tasks.empty?
+      return render tasks, course_subject: @course_subject
+    end
     t ".no_tasks"
   end
 end

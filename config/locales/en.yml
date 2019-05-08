@@ -2,6 +2,11 @@ en:
   date_validator:
     date_after_error: is invalid date
     date_after_equal_error: is invalid date
+  course_subject:
+    date_duplicate: duplicated with subject %{name}
+  user_course:
+    user_not_found: not found
+    user_aready_in_opened_course: already in opened course
   errors:
     one: There is 1 error occured
     other: There are %{count} errors occured
@@ -219,6 +224,7 @@ en:
         finish_success: Subject finished successfully!
         finish_failed: Subject finished failed!
         subject_not_found: Subject not found!
+        course_not_started: Course is not started or finished
   layouts:
     admin:
       header:

@@ -275,6 +275,7 @@ en:
       task_procedure: Procedure
       available_tasks: Available tasks
       no_tasks: no tasks available
+      subject_is_finished: Subject is finished
   user_tasks:
     user_task:
       report_button: Report

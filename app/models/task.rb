@@ -3,6 +3,7 @@ class Task < ApplicationRecord
   has_many :users, through: :user_tasks
   belongs_to :course_subject
   scope :order_by_name, ->{order :name}
+  scope :except_task_ids, ->(task_ids){where.not id: task_ids}
   scope(:of_user,
     lambda do |user_id|
       joins(:user_tasks).where "user_tasks.user_id = ?", user_id

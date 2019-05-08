@@ -271,6 +271,7 @@ vi:
       task_procedure: Thao tác
       available_tasks: Các công việc chưa thực hiện
       no_tasks: Không có công việc nào
+      subject_is_finished: Môn học đã kết thúc
   user_tasks:
     user_task:
       report_button: Báo cáo

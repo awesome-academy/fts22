@@ -1,0 +1,7 @@
+<% if @success_adding_message %>
+  alert('<%= @success_adding_message %>')
+  $('#open-task-list').html('<%= j render @user_task.task.course_subject.tasks.except_task_ids(current_user.user_tasks.pluck(:task_id)) %>')
+  $('#user-task-list').html('<%= j render @user_task.user.user_tasks %>')
+<% else %>
+  alert('<%= @failed_adding_message %>')
+<% end %>

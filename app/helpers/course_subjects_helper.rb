@@ -1,4 +1,4 @@
-module SubjectsHelper
+module CourseSubjectsHelper
   def load_task user_task
     user_task.task
   end
@@ -16,12 +16,17 @@ module SubjectsHelper
     else
       {
         class: Settings.app.tasks.status_default_css_class,
-        content: Settings.app.tasks.default_status_content
+        content: t(".open")
       }
     end
   end
 
   def trainee_status_options
-    UserTask.statuses.except(:done, :commented).keys
+    UserTask.statuses.except(:done, :commented, :open).keys
+  end
+
+  def display_tasks tasks
+    return render tasks if @course_subject.started? && !tasks.empty?
+    t ".no_tasks"
   end
 end

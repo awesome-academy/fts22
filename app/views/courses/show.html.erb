@@ -29,7 +29,7 @@
           <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
             <div class="objctive_text">
               <ul class="list">
-                <%= render partial: "subject", collection: @course.subjects, as: :subject %>
+                <%= render partial: "subject", collection: @course.course_subjects, as: :course_subject %>
               </ul>
             </div>
           </div>
@@ -42,7 +42,7 @@
             <li>
                 <a href="#"><%= t".trainer" %>
                     <span>
-                      <%= render partial: "trainer", collection: @course.users, as: :user %>
+                      <%= render partial: "trainer", collection: @course.trainers, as: :user %>
                     </span>
                 </a>
             </li>

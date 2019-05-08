@@ -2,11 +2,14 @@
 <section class="sample-text-area">
   <div class="container">
     <div class="main_title">
-      <h2><%= @subject.name %></h2>
+      <h2><%= @course_subject.subject.name %></h2>
+      <% if @course_subject.finished? %>
+        <h3 class="salmon-heading"><%= t ".subject_is_finished" %></h3>
+      <% end %>
     </div>
     <h3 class="text-heading title_color"><%= t".heading" %></h3>
     <p class="sample-text">
-      <%= @subject.description %>
+      <%= @course_subject.subject.description %>
     </p>
   </div>
   <div class="whole-wrap">
@@ -18,13 +21,26 @@
             <div class="table-head">
               <div class="country"><%= t".task_name" %></div>
               <div class="country"><%= t".task_status" %></div>
-              <div class="country"><%= t".task_short_description" %></div>
               <div class="country"><%= t".task_procedure" %></div>
             </div>
-            <%= render partial: "task", collection: @user_tasks, as: :user_task %>
-            <%= render partial: "tasks/task_report_form" %>
+            <div id="user-task-list">
+              <%= render @user_tasks %>
+            </div>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+  <div class="container title_color">
+    <br />
+    <div class="form-group">
+      <a data-toggle="collapse" data-target="#open-task" href="#"><%= t ".available_tasks" %></a>
+      <div id="open-task" class="collapse">
+        <table class="table table-condensed">
+          <div id="open-task-list">
+            <%= display_tasks @tasks %>
+          </div>
+        </table>
       </div>
     </div>
   </div>

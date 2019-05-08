@@ -3186,16 +3186,23 @@ h6 {
 .start_button{
   margin-left: 45%;
 }
+
 .start-date-picker{
   width: 45%;
   float: left;
   margin-right: 5%;
   margin-left: 1%;
 }
+
 .end-date-picker{
   width: 45%;
   float:left;
 }
+
 .button-display{
   display: inline;
+}
+
+.salmon-heading{
+  color: salmon;
 }

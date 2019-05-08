@@ -1,0 +1,13 @@
+<div class="table-row">
+  <div class="country"><%= load_task(user_task).name %></div>
+  <div class="country">
+    <span class="label label-<%=add_class_task_status(user_task)[:class]%>">
+      <%= add_class_task_status(user_task)[:content] %>
+    </span>
+  </div>
+  <div class="country" >
+    <% unless load_task(user_task).course_subject.finished? %>
+      <%= link_to t(".report_button"), edit_user_task_path(user_task), class: "btn btn-primary procedure_hyperlink" %>
+    <% end %>
+  </div>
+</div>

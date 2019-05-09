@@ -147,6 +147,8 @@ en:
         trainees: List of Trainees
         subjects: List of Subjects
         start_button: Start this course
+        finish_button: Finish this course
+        course_is_finished: Course is finished
         start_course_confirm: Make sure you check all the information carefully, this can not be undone.
       course:
         setting: Setting
@@ -218,6 +220,10 @@ en:
         not_found: Task not found!
       courses_controller:
         course_not_found: Course not found!
+        start_success: Course started successfully!
+        start_fail: Course started failed!
+        finish_success: Course finished successfully!
+        finish_fail: Course finished failed!
       course_subjects_controller:
         start_success: Subject started successfully!
         start_failed: Subject started failed!

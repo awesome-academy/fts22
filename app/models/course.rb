@@ -11,7 +11,7 @@ class Course < ApplicationRecord
   validates :name, presence: true,
     length: {maximum: Settings.app.models.course.name_max_length}
   validates :start_date, presence: true,
-    date: {after_or_equal_to: Time.now}
+    date: {after_or_equal_to: Time.now - 1.day}
   validates :end_date, presence: true,
     date: {after: :start_date}
   enum status: {open: 0, start: 1, finished: 2}
@@ -31,5 +31,14 @@ class Course < ApplicationRecord
 
   def subjects_already_in_course
     Subject.where id: course_subjects.pluck(:subject_id)
+  end
+
+  def notify_to_everyone
+    users.each do |user|
+      CourseMailer.delay.course_started_notify self, user.email
+    end
+    trainers.each do |trainer|
+      CourseMailer.delay.course_started_notify self, trainer.email
+    end
   end
 end

@@ -7,6 +7,10 @@ en:
   user_course:
     user_not_found: not found
     user_aready_in_opened_course: already in opened course
+  course_mailer:
+    trainee_daily_report:
+      heading: Trainee report today
+      done: done
   errors:
     one: There is 1 error occured
     other: There are %{count} errors occured

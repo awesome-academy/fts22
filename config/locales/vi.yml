@@ -146,6 +146,8 @@ vi:
         trainees: Các sinh viên của khóa học
         subjects: Danh sách môn học của khóa học
         start_button: Bắt đầu khóa học này
+        finish_button: Kết thúc khóa học này
+        course_is_finished: Khóa học này đã kết thúc
         start_course_confirm: Bạn có chắc chắn muốn bắt đầu khóa học này?
       course:
         setting: Tùy chỉnh
@@ -214,6 +216,10 @@ vi:
         not_found: Lỗi, không tìm thấy task này!
       courses_controller:
         course_not_found: Lỗi, không tìm thấy khóa học này!
+        start_success: Bắt đầu khóa học thành công!
+        start_fail: Bắt đầu khóa học thất bại!
+        finish_success: Khóa học đã kết thúc!
+        finish_fail: Thao tác thất bại!
       course_subjects_controller:
         start_success: Bắt đầu môn học thành công!
         start_failed: Tác vụ thất bại!

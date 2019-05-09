@@ -24,6 +24,8 @@ Rails.application.routes.draw do
       resources :tasks, except: %i(index new)
       patch "/start-subject/:id", to: "course_subjects#start_subject", as: "start_subject"
       patch "/finish-subject/:id", to: "course_subjects#finish_subject", as: "finish_subject"
+      post "/start-course/:id", to: "courses#start_course", as: "start_course"
+      post "/finish-course/:id", to: "courses#finish_course", as: "finish_course"
     end
   end
 end

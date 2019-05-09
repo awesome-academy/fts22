@@ -29,6 +29,19 @@ Rails.application.configure do
 
   # Store uploaded files on the local file system (see config/storage.yml for options)
   config.active_storage.service = :local
+  host = Settings.app.developement.host
+  config.action_mailer.default_url_options = {host: host}
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address: Settings.app.developement.action_mailer.address,
+    port: Settings.app.developement.action_mailer.port,
+    domain: Settings.app.developement.action_mailer.domain,
+    user_name: ENV['SENDGRID_USERNAME'],
+    password:  ENV['SENDGRID_PASSWORD'],
+    authentication: :plain,
+    enable_starttls_auto: true
+  }
 
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false

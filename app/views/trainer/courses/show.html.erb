@@ -5,6 +5,7 @@
     <h2 class="mb-30 title_color"><%= t ".heading" %></h2>
     <p>
       <h3><%= t ".name" %> : <%= @course.name %></h3>
+      <h3><%= t ".course_is_finished" if @course.finished? %></h3>
     </p>
     <p>
       <h4><%= @course.description %></h4>
@@ -12,6 +13,12 @@
     <p>
       <h4><%= t ".date", start: l(@course.start_date, format: :long), end: l(@course.end_date, format: :long) %></h4>
     </p>
+    <div class="form-group">
+      <% unless @course.start? || @course.finished? %>
+      <%= link_to t(".start_button"), trainer_start_course_path(@course), method: :post, class: "btn btn-primary" %>
+      <% end %>
+      <%= link_to t(".finish_button"), trainer_finish_course_path(@course), method: :post, class: "btn btn-danger" if @course.start? %>
+    </div>
     <br />
     <div class="form-group">
       <a data-toggle="collapse" data-target="#trainee" href="#"><%= t ".trainees" %></a>
@@ -22,7 +29,7 @@
           </tbody>
         </table>
         <div class="form-group" id="add-supervisor">
-          <%= render "trainer/user_courses/create" %>
+          <%= render "trainer/user_courses/create" unless @course.finished? %>
         </div>
       </div>
     </div>

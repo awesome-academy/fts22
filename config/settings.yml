@@ -9,11 +9,14 @@ app:
     status_default_css_class: "default"
     default_status_content: "Open"
     tasks_per_page: 5
+  users:
+    users_per_page: 5
   models:
     user:
       name_max_length: 50
       email_max_length: 255
       password_max_length: 8
+      default_password_lenght: 4
     course:
       name_max_length: 50
       course_per_page: 1

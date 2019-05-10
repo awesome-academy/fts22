@@ -19,6 +19,7 @@ class User < ApplicationRecord
     allow_nil: true
   enum role: {trainee: 0, admin: 1, trainer: 2}
   scope :except_user_id, ->(user_id){where.not id: user_id}
+  scope :newest, ->{order created_at: :desc}
 
   def self.digest string
     BCrypt::Password.create(string, cost: User.get_cost)
@@ -46,5 +47,13 @@ class User < ApplicationRecord
 
   def forget
     update remember_digest: nil
+  end
+
+  def send_created_email
+    UserMailer.user_created(self).deliver_later
+  end
+
+  def send_assigned_course_email course
+    UserMailer.user_assigned_to_course(self, course).deliver_now
   end
 end

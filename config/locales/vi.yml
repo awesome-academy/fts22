@@ -7,16 +7,26 @@ vi:
   user_course:
     user_not_found: không tồn tại
     user_aready_in_opened_course: đã ở trong một khóa học đang bắt đầu
-  course_mailer:
-    trainee_daily_report:
-      heading: Báo cáo của các học viên trong hôm nay
-      done: hoàn thành
   errors:
     one: Có 1 lỗi xảy ra
     other: Có %{count} lỗi xảy ra
   will_paginate:
     next_label: Trang kế
     previous_label: Trang trước
+  mailer:
+    user:
+      user_created_subject: Tài khoản đã được tạo
+  course_mailer:
+    trainee_daily_report:
+      heading: Báo cáo của các học viên trong hôm nay
+      done: hoàn thành
+  user_mailer:
+    user_assigned_to_course:
+      greeting: Xin chào %{user_name}
+      content: Bạn đã được thêm vào khóa học %{course_name} được bắt đầu vào %{start}!
+    user_created:
+      greeting: Xin chào %{user_name}
+      content: Tài khoản của bạn đã được tạo, mật khẩu mặc định của bạn là
   admin:
     subjects:
       index:
@@ -206,6 +216,36 @@ vi:
         description: Mô tả
         submit: Cập nhật
         close_button: Đóng
+    trainees:
+      index:
+        title: Quản lý học viên
+        heading_trainer: Danh sách học viên
+        new_trainee: Thêm mới
+        name: Tên
+        email: Địa chỉ email
+        created_at: Được tạo
+        procedure: Thao tác
+      edit:
+        title: Chỉnh sửa học viên
+        heading: Chỉnh sửa học viên
+        name: Tên
+        email: Địa chỉ email
+        submit_button: Cập nhật
+        back_button: Đóng
+      new:
+        title: Quản lý học viên
+        heading: Thêm mới học viên
+        name: Tên
+        email: Địa chỉ email
+        assign_to_course: Thêm vào khóa học
+        choose_course: Chọn khóa học
+        back_button: Trở về
+        submit_button: Lưu
+      trainee:
+        edit: Sửa
+        delete: Xóa
+        delete_confirm: Bạn có chắc chắn muốn xóa?
+        created_at: "%{time_ago} trước"
     controllers:
       user_courses_controller:
         created_success: Thêm thành công!
@@ -230,7 +270,14 @@ vi:
         finish_success: Kết thúc môn học thành công!
         finish_failed: Tác vụ thất bại!
         subject_not_found: Lỗi! Không tìm thấy môn học này!
-        course_not_started: Khóa học chưa bắt đầu hoặc đã kết thúc\
+        course_not_started: Khóa học chưa bắt đầu hoặc đã kết thúc
+      trainees_controller:
+        updated_success: Cập nhật thành công!
+        created_success: Tạo mới thành công!
+        course_not_found: Khóa học này không tồn tại hoặc đã đóng!
+        trainee_not_found: Lỗi! không tìm thấy học viên này!
+        deleted_success: Xóa thành công!
+        deleted_fail: Xóa thất bại!
   layouts:
     admin:
       header:
@@ -248,6 +295,7 @@ vi:
         vie: Tiếng Việt
         subjects: Các môn học
         courses: Các khóa học
+        trainees: Các học viên
         profile: Thông tin
         logout: Đăng xuất
       footer:

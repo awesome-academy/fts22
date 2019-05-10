@@ -7,16 +7,26 @@ en:
   user_course:
     user_not_found: not found
     user_aready_in_opened_course: already in opened course
-  course_mailer:
-    trainee_daily_report:
-      heading: Trainee report today
-      done: done
   errors:
     one: There is 1 error occured
     other: There are %{count} errors occured
   will_paginate:
     next_label: Next
     previous_label: Previous
+  mailer:
+    user:
+      user_created_subject: Account created
+  course_mailer:
+    trainee_daily_report:
+      heading: Trainee report today
+      done: done
+  user_mailer:
+    user_assigned_to_course:
+      greeting: Hi %{user_name}
+      content: Your are assigned to course %{course_name} which begin at %{start}!
+    user_created:
+      greeting: Hi %{user_name}
+      content: Your account has been created, your default password is
   admin:
     subjects:
       index:
@@ -113,7 +123,7 @@ en:
         subject_not_found: Subject not found, please try again!
         created_success: Subject created successfully!
         updated_success: Subject updated successfully!
-        delete_success: Subject updated successfully!!
+        delete_success: Subject updated successfully!
         delete_fail: Subject updated failed!
       courses_controller:
         add_success: Course created successfully!
@@ -210,6 +220,36 @@ en:
         description: Description
         submit: Update
         close_button: Close
+    trainees:
+      index:
+        title: Trainees managemnt
+        heading_trainer: Trainee list
+        new_trainee: Add new
+        name: Name
+        email: Email
+        created_at: Created at
+        procedure: Procedure
+      edit:
+        title: Edit trainee
+        heading: Edit trainee
+        name: Name
+        email: Email
+        submit_button: Update
+        back_button: Close
+      new:
+        title: Trainees managemnt
+        heading: New trainee
+        name: Name
+        email: Email
+        assign_to_course: Assign to course
+        choose_course: Choose course
+        back_button: Cancel
+        submit_button: Save
+      trainee:
+        edit: Edit
+        delete: Delete
+        delete_confirm: You sure?
+        created_at: "%{time_ago} ago"
     controllers:
       user_courses_controller:
         created_success: Trainee assigned successfully!
@@ -235,6 +275,13 @@ en:
         finish_failed: Subject finished failed!
         subject_not_found: Subject not found!
         course_not_started: Course is not started or finished
+      trainees_controller:
+        updated_success: Updated successfully!
+        created_success: Trainee created successfully!
+        course_not_found: This course does not exist or has been closed!
+        trainee_not_found: Trainee not found!
+        deleted_success: Deleted successfully!
+        deleted_fail: Deleted failed!
   layouts:
     admin:
       header:
@@ -252,6 +299,7 @@ en:
         vie: Vietnamese
         subjects: Subjects
         courses: Courses
+        trainees: Trainees
         profile: Profile
         logout: Log out
       footer:

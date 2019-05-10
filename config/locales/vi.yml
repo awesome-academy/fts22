@@ -7,6 +7,10 @@ vi:
   user_course:
     user_not_found: không tồn tại
     user_aready_in_opened_course: đã ở trong một khóa học đang bắt đầu
+  course_mailer:
+    trainee_daily_report:
+      heading: Báo cáo của các học viên trong hôm nay
+      done: hoàn thành
   errors:
     one: Có 1 lỗi xảy ra
     other: Có %{count} lỗi xảy ra

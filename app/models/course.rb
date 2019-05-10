@@ -41,4 +41,13 @@ class Course < ApplicationRecord
       CourseMailer.delay.course_started_notify self, trainer.email
     end
   end
+
+  def send_trainees_report_to_trainer
+    user_tasks =
+      UserTask.by_tasks_id(tasks.pluck(:id)).ready.today
+    trainers.each do |trainer|
+      CourseMailer.delay.trainee_daily_report user_tasks, trainer.email,
+        name
+    end
+  end
 end

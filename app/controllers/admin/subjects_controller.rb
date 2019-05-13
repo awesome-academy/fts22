@@ -1,4 +1,5 @@
 class Admin::SubjectsController < Admin::BaseController
+  authorize_resource :subject
   before_action :load_subject, except: %i(index new create)
 
   def index

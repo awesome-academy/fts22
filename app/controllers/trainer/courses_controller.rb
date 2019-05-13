@@ -1,4 +1,5 @@
 class Trainer::CoursesController < Trainer::BaseController
+  authorize_resource :course
   before_action :load_course, only: %i(show start_course finish_course)
 
   def index

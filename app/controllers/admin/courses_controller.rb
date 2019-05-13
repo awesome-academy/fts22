@@ -1,4 +1,5 @@
 class Admin::CoursesController < Admin::BaseController
+  authorize_resource :course
   before_action :load_course, except: %i(index new create)
 
   def index

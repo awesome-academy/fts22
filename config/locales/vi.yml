@@ -403,6 +403,7 @@ vi:
         heading: Đặt lại mật khẩu
         new_password: Mật khẩu mới
         confirm: Nhập lại mật khẩu
+        minimum: "mật khẩu phải ít nhất %{length} ký tự"
         reset_button: Đặt lại
     confirmations:
       new:
@@ -415,6 +416,7 @@ vi:
         unlock: Không nhận được liên kết mở khóa?
         signin_with: Đăng nhập với
   controllers:
+    autorization_fail: Không tìm thấy trang
     sessions_controller:
       login_failed: Email hoặc mật khẩu không đúng
     users_controller:

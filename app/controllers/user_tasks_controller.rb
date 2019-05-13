@@ -1,4 +1,5 @@
 class UserTasksController < ApplicationController
+  authorize_resource :user_task
   before_action :load_user_task, only: %i(edit update)
 
   def create

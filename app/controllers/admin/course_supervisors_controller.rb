@@ -1,4 +1,5 @@
 class Admin::CourseSupervisorsController < Admin::BaseController
+  authorize_resource :course_supervisor
   before_action :load_course_supervisor, only: :destroy
 
   def create

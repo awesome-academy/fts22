@@ -1,6 +1,7 @@
 class CourseSubjectsController < ApplicationController
-  before_action :load_course_subject, :load_tasks,
-    only: :show
+  authorize_resource :course_subject
+  before_action :load_course_subject,
+    :load_tasks, only: :show
 
   def show; end
 

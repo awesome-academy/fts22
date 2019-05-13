@@ -31,3 +31,7 @@ app:
       address: smtp.gmail.com
       port: 587
       domain: example.com
+  controller:
+    namespace_for_admin: "Admin"
+    namespace_for_trainer: "Trainer"
+    namespace_for_trainee: ""

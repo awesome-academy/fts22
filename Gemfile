@@ -6,6 +6,7 @@ ruby "2.5.1"
 gem "bcrypt", "3.1.12"
 gem "bootsnap", ">= 1.1.0", require: false
 gem "bootstrap-select-rails"
+gem "cancancan"
 gem "carrierwave", "1.1.0"
 gem "ckeditor"
 gem "coffee-rails", "~> 4.2"

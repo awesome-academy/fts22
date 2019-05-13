@@ -1,10 +1,9 @@
 Rails.application.routes.draw do
   scope "(:locale)", locale: /en|vi/ do
-    root "sessions#new"
+    devise_for :users
+    root "courses#index"
 
     mount Ckeditor::Engine => "/ckeditor"
-    post "/login", to: "sessions#create"
-    delete "/logout", to: "sessions#destroy"
     resources :courses, only: %i(index show)
     resources :subjects, only: :show
     resources :course_subjects, only: :show

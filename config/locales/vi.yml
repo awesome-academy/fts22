@@ -360,14 +360,56 @@ vi:
       close_button: Đóng
     task:
       pick_task: Thực hiện công việc này
-  sessions:
-    new:
-      title: Đăng nhập
-      heading: Đăng nhập để tiếp tục
-      login_button: Đăng nhập
-      email: Email
-      password: Mật khẩu
-      remember: Giữ tôi đăng nhập
+  devise:
+    sessions:
+      new:
+        title: Đăng nhập
+        heading: Đăng nhập để tiếp tục
+        login_button: Đăng nhập
+        email: Email
+        password: Mật khẩu
+        remember: Giữ tôi đăng nhập
+    mailer:
+      confirmation_instructions:
+        greeting: Chào mừng %{name}!
+        paragraph: Bạn có thể xác nhận email của bạn thông qua liên kết dưới đây
+        confirm_url: Xác nhận tài khoản
+      email_changed:
+        greeting: Chào %{name}
+        paragraph_changing: Email của bạn đang được đổi thành
+        paragraph_changed: Email của bạn đã được đổi thành
+      password_change:
+        greeting: Chào %{name}
+        paragraph: Mật khẩu của bạn đã được thay đổi.
+      reset_password_instructions:
+        greeting: Chào %{name}
+        paragraph_1: Tài khoản của bạn đã gửi yêu cầu đổi mật khẩu bằng cách nhấn vào liên kết bên dưới.
+        paragraph_2: Nếu bạn không yêu cầu điều này hãy bỏ qua email này.
+        paragraph_3: Mật khẩu của bạn sẽ không thay đổi trừ khi bạn truy cập vào liên kết bên dứơi.
+        reset_password_url: Thay đổi mật khẩu
+      unlock_instructions:
+        greeting: Chào %{name}
+        paragraph_1: Tài khoản của bạn đã bị khóa vì truy cập quá số lần thử cho phép.
+        paragraph_2: Nhấp vào liên kết bên duwois để mở khóa tài khoản
+        unlock_url: Mở khóa tài khoản
+    passwords:
+      new:
+        title: Quên mật khẩu
+        heading: Quên mật khẩu
+        login_button: Gửi liên kết đặt lại mật khẩu
+        email: Email
+      edit:
+        title: Đặt lại mật khẩu
+        heading: Đặt lại mật khẩu
+        new_password: Mật khẩu mới
+        confirm: Nhập lại mật khẩu
+        reset_button: Đặt lại
+    shared:
+      links:
+        login: Đăng nhập
+        fogot: Quên mật khẩu?
+        unlock: Không nhận được liên kết mở khóa?
+        signin_with: Đăng nhập với
   controllers:
     sessions_controller:
       login_failed: Email hoặc mật khẩu không đúng

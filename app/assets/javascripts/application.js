@@ -29,3 +29,4 @@
 //= require activestorage
 //= require turbolinks
 //= require fts22
+//= require bootstrap-select

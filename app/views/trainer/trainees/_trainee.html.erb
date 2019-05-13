@@ -1,0 +1,9 @@
+<div class="table-row">
+  <div class="country"><%= trainee.name %></div>
+  <div class="country"><%= trainee.email %></div>
+  <div class="country"><%= t ".created_at", time_ago: time_ago_in_words(trainee.created_at) %></div>
+  <div class="country">
+    <%= link_to t(".edit"), edit_trainer_trainee_path(trainee), class: "procedure_hyperlink" %>
+    <%= link_to t(".delete"), trainer_trainee_path(trainee), method: :delete, data: {confirm: t(".delete_confirm")} %>
+  </div>
+</div>

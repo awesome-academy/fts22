@@ -21,4 +21,5 @@
  *= require responsive
  *= require simpleLightbox
  *= require style
+ *= require bootstrap-select
  */

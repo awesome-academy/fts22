@@ -14,6 +14,7 @@ function openTaskEditForm(updateUrl, name, description) {
 }
 
 document.addEventListener('turbolinks:load', function () {
+  $('.selectpicker').selectpicker();
   if ($('textarea').length > 0) {
     var data = $('.ckeditor');
     $.each(data, function (i) {

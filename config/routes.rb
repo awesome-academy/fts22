@@ -22,6 +22,7 @@ Rails.application.routes.draw do
       resources :user_courses, only: %i(create destroy)
       resources :course_subjects, only: %i(show update)
       resources :tasks, except: %i(index new)
+      resources :trainees, except: :show
       patch "/start-subject/:id", to: "course_subjects#start_subject", as: "start_subject"
       patch "/finish-subject/:id", to: "course_subjects#finish_subject", as: "finish_subject"
       post "/start-course/:id", to: "courses#start_course", as: "start_course"

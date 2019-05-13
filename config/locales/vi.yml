@@ -404,6 +404,10 @@ vi:
         new_password: Mật khẩu mới
         confirm: Nhập lại mật khẩu
         reset_button: Đặt lại
+    confirmations:
+      new:
+        heading: Gửi lại thông tin xác nhận tài khoản
+        submit_button: Gửi lại thông tin xác nhận
     shared:
       links:
         login: Đăng nhập

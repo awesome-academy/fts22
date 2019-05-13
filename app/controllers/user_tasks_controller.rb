@@ -1,5 +1,4 @@
 class UserTasksController < ApplicationController
-  before_action :logged_in_user
   before_action :load_user_task, only: %i(edit update)
 
   def create

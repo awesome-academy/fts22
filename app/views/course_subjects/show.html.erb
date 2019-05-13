@@ -34,7 +34,7 @@
   <div class="container title_color">
     <br />
     <div class="form-group">
-      <a data-toggle="collapse" data-target="#open-task" href="#"><%= t ".available_tasks" %></a>
+      <a data-toggle="collapse" data-target="#open-task" href="#"><%= t ".available_tasks" %> (<%= @tasks.size %>)</a>
       <div id="open-task" class="collapse">
         <table class="table table-condensed">
           <div id="open-task-list">

@@ -4,7 +4,8 @@ class CoursesController < ApplicationController
   before_action :handle_redirect, only: :index
 
   def index
-    @courses = current_user.courses.newest.paginate page: params[:page],
+    @search = current_user.courses.search params[:q]
+    @courses = @search.result.newest.paginate page: params[:page],
       per_page: Settings.app.models.course.course_per_page
   end
 

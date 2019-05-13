@@ -19,7 +19,7 @@ app:
       default_password_lenght: 4
     course:
       name_max_length: 50
-      course_per_page: 1
+      course_per_page: 3
     subject:
       subject_per_page: 4
       name_max_length: 100

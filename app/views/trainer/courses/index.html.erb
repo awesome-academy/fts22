@@ -5,13 +5,14 @@
 
     <div class="section-top-border">
       <h3 class="mb-30 title_color"><%= t".heading_trainer" %></h3>
+      <%= render "search_form" %>
       <div class="progress-table-wrap">
         <div class="progress-table" id="task_table">
           <div class="table-head">
-            <div class="country"><%= t".name" %></div>
-            <div class="country"><%= t".description" %></div>
-            <div class="country"><%= t".schedule" %></div>
-            <div class="country"><%= t".status" %></div>
+            <div class="country"><%= sort_link @search, :name, t(".name") %></div>
+            <div class="country"><%= sort_link @search, :description, t(".description") %></div>
+            <div class="country"><%= sort_link @search, :start_date, t(".schedule") %></div>
+            <div class="country"><%= sort_link @search, :status, t(".status") %></div>
             <div class="country"><%= t".procedure" %></div>
           </div>
           <%= render @courses %>

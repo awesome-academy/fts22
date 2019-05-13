@@ -35,7 +35,7 @@ User.create!(name: "Ton That Nhat Quan",
   password_confirmation: "11111111")
 
 User.create!(name: "Ho Minh Huy",
-  email: "ho.minh.huy@sun-asterisk.com",
+  email: "phandanghaivu@gmail.com",
   role: 2,
   password: "11111111",
   password_confirmation: "11111111")
@@ -58,19 +58,19 @@ User.create!(name: "Do Thi Diem Thao",
   password: "11111111",
   password_confirmation: "11111111")
 
-Course.create!(name: "PHP laravel",
-  description: "laravel tutorial",
+Course.create!(name: "Ruby on rails 21",
+  description: "Ruby training batch 21",
   image: "course-2.jpg",
   start_date: Time.now + 1.day,
   end_date: Time.now + 2.months,
   status: 0)
 
-Course.create!(name: "Ruby on rails",
-  description: "Ruby on rails tutorial",
+Course.create!(name: "PHP laravel 21",
+  description: "PHP training batch 21",
   image: "course-4.jpg",
   start_date: Time.now + 1.day,
   end_date: Time.now + 2.months,
-  status: 1)
+  status: 2)
 
 UserCourse.create!(user_id: 1,
   course_id: 1,
@@ -139,4 +139,4 @@ UserTask.create!(user_id: 1,
 UserTask.create!(user_id: 1,
   task_id: 2,
   short_description: "pull request https://abc.com/xyz/pull/9",
-  status: 0)
+  status: 1)

@@ -1,0 +1,9 @@
+<div class="subject-search-form">
+  <%= search_form_for [:admin ,@search], url: admin_subjects_path, class: "form-inline" do |f| %>
+    <div class="form-group ">
+      <%= link_to t(".reset_link"), request.path, class: "cancel-search" %>
+      <%= f.text_field :name_or_description_cont, class: "form-control", placeholder: t(".name_search") %>
+    </div>
+    <%= f.submit t(".search_button"), class: "btn btn-default" %>
+  <% end %>
+</div>

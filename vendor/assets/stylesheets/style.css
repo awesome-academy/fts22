@@ -3219,6 +3219,11 @@ h6 {
   float: right;
 }
 
+.subject-search-form{
+  float: right;
+  margin-right: 50px;
+}
+
 .cancel-search{
   margin-right: 15px;
 }

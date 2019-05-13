@@ -37,6 +37,10 @@ en:
         name: Name
         description: description
         procedure: Procedure
+      search_form:
+        name_search: Name or Description
+        search_button: Search
+        reset_link: Clear Search
       new:
         title: New subject
         heading: New subject
@@ -67,6 +71,11 @@ en:
         status: Status
         image: Image
         procedure: Procedure
+      search_form:
+        name_search: Course Name
+        status_search: Status
+        search_button: Search
+        reset_link: Clear Search
       course:
         delete: Delete
         edit: Edit
@@ -434,7 +443,7 @@ en:
         unlock: Didn't receive unlock instructions?
         signin_with: Sign in with
   controllers:
-    autorization_fail: You are not allowed to do this
+    autorization_fail: Page not found!
     page_not_found: Page not found!
     sessions_controller:
       login_failed: Invalid email/password combination

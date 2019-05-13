@@ -5,6 +5,7 @@
 
     <div class="section-top-border">
       <h3 class="mb-30 title_color"><%= t".heading_trainer" %></h3>
+      <%= render "search_form" %>
       <%= link_to t(".new"), new_admin_course_path, class: "btn btn-primary" %>
       <div class="progress-table-wrap">
         <div class="progress-table" id="task_table">

@@ -37,6 +37,10 @@ vi:
         name: Tên môn học
         description: Mô tả
         procedure: Thao tác
+      search_form:
+        name_search: Tên hoặc mô tả
+        search_button: Tìm
+        reset_link: Hủy tìm
       new:
         title: Tạo mới môn học
         heading: Tạo mới môn học
@@ -66,6 +70,11 @@ vi:
         image: Hình ảnh
         procedure: Thao tác
         heading_trainer: Danh sách khóa học
+      search_form:
+        name_search: Tên khóa học
+        status_search: Trạng thái
+        search_button: Tìm
+        reset_link: Hủy tìm
       course:
         delete: Xóa
         edit: Sửa
@@ -430,7 +439,7 @@ vi:
         unlock: Không nhận được liên kết mở khóa?
         signin_with: Đăng nhập với
   controllers:
-    autorization_fail: Bạn không có quyền truy cập trang này!
+    autorization_fail: Không tìm thấy trang!
     page_not_found: Không tìm thấy trang!
     sessions_controller:
       login_failed: Email hoặc mật khẩu không đúng
@@ -449,3 +458,10 @@ vi:
       user_task_not_found: Công việc không tồn tại!
       pick_task_success: Thao tác thành công!
       pick_task_fail: Thao tác thất bại!
+  activerecord:
+    attributes:
+      course:
+        statuses:
+          open: Mở
+          start: Đã bắt đầu
+          finished: Đã kết thúc

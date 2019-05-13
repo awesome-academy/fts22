@@ -10,11 +10,11 @@
   <div class="main_menu">
     <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container">
-        <a class="navbar-brand logo_h" href="index.html"><%= image_tag("sun-asterisk-logo.png", size: "170x102",alt: "Sun-asterisk") %></a>
+        <a class="navbar-brand logo_h" href="<%= root_path %>"><%= image_tag("sun-asterisk-logo.png", size: "170x102",alt: "Sun-asterisk") %></a>
         <% if user_signed_in? %>
           <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
             <ul class="nav navbar-nav menu_nav ml-auto">
-              <li class="nav-item"><a class="nav-link" href="index.html"><%= t".home" %></a></li>
+              <li class="nav-item"><a class="nav-link" href="<%= root_path %>"><%= t".home" %></a></li>
               <li class="nav-item"><a class="nav-link" href="about-us.html"><%= t".trainer" %></a></li>
               <li class="nav-item active"><%= link_to t(".course"), courses_path, class: "nav-link" %></li>
               <li class="nav-item submenu dropdown">

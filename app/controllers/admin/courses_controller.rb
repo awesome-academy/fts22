@@ -3,7 +3,8 @@ class Admin::CoursesController < Admin::BaseController
   before_action :load_course, except: %i(index new create)
 
   def index
-    @courses = Course.newest.paginate page: params[:page],
+    @search = Course.search params[:q]
+    @courses = @search.result.newest.paginate page: params[:page],
       per_page: Settings.app.models.course.course_per_page
   end
 

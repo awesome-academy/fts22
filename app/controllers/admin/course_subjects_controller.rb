@@ -1,5 +1,4 @@
 class Admin::CourseSubjectsController < Admin::BaseController
-  before_action :logged_in_user, :is_admin?
   before_action :load_course_subject, only: :destroy
 
   def create

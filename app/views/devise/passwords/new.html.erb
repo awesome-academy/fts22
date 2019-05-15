@@ -1,0 +1,22 @@
+<% provide(:title, t(".title")) %>
+
+<div class="container login_form">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-4">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title"><%= t".heading" %></h3>
+        </div>
+        <div class="panel-body">
+          <%= form_for resource, as: resource_name, url: password_path(resource_name), html: { method: :post } do |f| %>
+            <div class="form-group">
+              <%= f.email_field :email, class: "form-control", placeholder: t(".email"), autofocus: true, autocomplete: "email" %>
+            </div>
+            <%= f.submit t(".login_button"), class: "btn btn-lg btn-success btn-block" %>
+            <%= render "devise/shared/links" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

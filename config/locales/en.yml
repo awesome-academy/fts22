@@ -408,6 +408,10 @@ en:
         new_password: New password
         confirm: New password confirmation
         reset_button: Change my password
+    confirmations:
+      new:
+        heading: Resend confirmation instructions
+        submit_button: Resend confirmation instructions
     shared:
       links:
         login: Log in

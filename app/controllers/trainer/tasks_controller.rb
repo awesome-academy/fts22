@@ -1,4 +1,5 @@
 class Trainer::TasksController < Trainer::BaseController
+  authorize_resource :task
   before_action :load_task, only: %i(destroy update)
 
   def create

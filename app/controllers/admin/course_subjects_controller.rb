@@ -1,4 +1,5 @@
 class Admin::CourseSubjectsController < Admin::BaseController
+  authorize_resource :course_subject
   before_action :load_course_subject, only: :destroy
 
   def create

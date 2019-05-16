@@ -1,5 +1,14 @@
 class ApplicationController < ActionController::Base
   before_action :set_locale, :authenticate_user!
+  rescue_from CanCan::AccessDenied do
+    respond_to do |format|
+      format.html do
+        flash[:danger] = t "controllers.autorization_fail"
+        redirect_to root_path
+      end
+      format.js{render nothing: true, status: 404}
+    end
+  end
 
   def set_locale
     I18n.locale = params[:locale] || I18n.default_locale
@@ -9,15 +18,7 @@ class ApplicationController < ActionController::Base
     {locale: I18n.locale}
   end
 
-  def is_admin?
-    return if current_user.admin?
-    flash[:danger] = t "controllers.users_controller.not_admin"
-    redirect_to root_path
-  end
-
-  def is_trainer?
-    return if current_user.trainer?
-    flash[:danger] = t "controllers.users_controller.not_trainer"
-    redirect_to root_path
+  def current_ability
+    @current_ability ||= Ability.new(current_user, "")
   end
 end

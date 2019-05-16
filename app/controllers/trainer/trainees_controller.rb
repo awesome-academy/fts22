@@ -1,4 +1,5 @@
 class Trainer::TraineesController < Trainer::BaseController
+  authorize_resource :user
   before_action :load_courses, only: %i(new create)
   before_action :load_trainee, only: %i(edit update destroy)
 

@@ -407,6 +407,7 @@ en:
         heading: Reset password
         new_password: New password
         confirm: New password confirmation
+        minimum: "%{length} characters minimum"
         reset_button: Change my password
     confirmations:
       new:
@@ -419,6 +420,7 @@ en:
         unlock: Didn't receive unlock instructions?
         signin_with: Sign in with
   controllers:
+    autorization_fail: Page not found!
     sessions_controller:
       login_failed: Invalid email/password combination
     users_controller:

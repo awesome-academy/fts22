@@ -1,4 +1,5 @@
 class Trainer::UserCoursesController < Trainer::BaseController
+  authorize_resource :user_course
   before_action :load_user_course, only: :destroy
 
   def create

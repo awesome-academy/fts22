@@ -1,4 +1,5 @@
 class Trainer::CourseSubjectsController < Trainer::BaseController
+  authorize_resource :course_subject
   before_action :load_course_subject,
     only: %i(show start_subject finish_subject)
 

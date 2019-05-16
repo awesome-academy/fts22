@@ -1,4 +1,5 @@
 class CoursesController < ApplicationController
+  authorize_resource :course
   before_action :load_course, only: :show
   before_action :handle_redirect, only: :index
 

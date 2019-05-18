@@ -153,6 +153,11 @@ en:
         schedule: Schedule
         status: Status
         procedure: Procedure
+      search_form:
+        name_search: Course Name
+        status_search: Status
+        search_button: Search
+        reset_link: Clear Search
       show:
         title: Custom course
         heading: Course information
@@ -229,6 +234,10 @@ en:
         email: Email
         created_at: Created at
         procedure: Procedure
+      search_form:
+        name_search: Name or email
+        search_button: Search
+        reset_link: Clear Search
       edit:
         title: Edit trainee
         heading: Edit trainee
@@ -320,6 +329,11 @@ en:
       title: Courses
       heading: My courses
       course_image: Course image
+    search_form:
+      name_search: Course Name
+      status_search: Status
+      search_button: Search
+      reset_link: Clear Search
     show:
       title: Courses details
       objective: Objective
@@ -420,7 +434,8 @@ en:
         unlock: Didn't receive unlock instructions?
         signin_with: Sign in with
   controllers:
-    autorization_fail: Page not found!
+    autorization_fail: You are not allowed to do this
+    page_not_found: Page not found!
     sessions_controller:
       login_failed: Invalid email/password combination
     users_controller:

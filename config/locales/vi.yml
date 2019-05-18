@@ -151,6 +151,11 @@ vi:
         status: Trạng thái
         procedure: Thao tác
         heading_trainer: Danh sách khóa học
+      search_form:
+        name_search: Tên khóa học
+        status_search: Trạng thái
+        search_button: Tìm
+        reset_link: Hủy tìm
       show:
         title: Tùy chỉnh
         heading: Thông tin khóa học
@@ -225,6 +230,10 @@ vi:
         email: Địa chỉ email
         created_at: Được tạo
         procedure: Thao tác
+      search_form:
+        name_search: Tên hoặc email
+        search_button: Tìm
+        reset_link: Hủy tìm
       edit:
         title: Chỉnh sửa học viên
         heading: Chỉnh sửa học viên
@@ -316,6 +325,11 @@ vi:
       title: Các khóa học
       heading: Khóa học của tôi
       course_image: Hình ảnh khóa học
+    search_form:
+      name_search: Tên khóa học
+      status_search: Trạng thái
+      search_button: Tìm
+      reset_link: Hủy tìm
     show:
       title: Chi tiết khóa học
       objective: Mục tiêu khóa học
@@ -416,7 +430,8 @@ vi:
         unlock: Không nhận được liên kết mở khóa?
         signin_with: Đăng nhập với
   controllers:
-    autorization_fail: Không tìm thấy trang
+    autorization_fail: Bạn không có quyền truy cập trang này!
+    page_not_found: Không tìm thấy trang!
     sessions_controller:
       login_failed: Email hoặc mật khẩu không đúng
     users_controller:

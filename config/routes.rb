@@ -27,5 +27,6 @@ Rails.application.routes.draw do
       post "/start-course/:id", to: "courses#start_course", as: "start_course"
       post "/finish-course/:id", to: "courses#finish_course", as: "finish_course"
     end
+    match "*path", to: "application#handle_routing_error", via: :all
   end
 end

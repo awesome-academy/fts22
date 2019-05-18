@@ -3,7 +3,8 @@ class Trainer::CoursesController < Trainer::BaseController
   before_action :load_course, only: %i(show start_course finish_course)
 
   def index
-    @courses = current_user.trainer_courses.newest.paginate page: params[:page],
+    @search = current_user.trainer_courses.search params[:q]
+    @courses = @search.result.newest.paginate page: params[:page],
       per_page: Settings.app.models.course.course_per_page
   end
 

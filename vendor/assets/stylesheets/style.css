@@ -98,7 +98,7 @@ button:focus {
 .main_title {
   text-align: center;
   max-width: 680px;
-  margin: 0px auto 75px; }
+  margin: 0px auto 25px; }
   .main_title h2 {
     font-family: "Playfair Display", serif;
     font-size: 36px;
@@ -3205,4 +3205,20 @@ h6 {
 
 .salmon-heading{
   color: salmon;
+}
+
+.form-component{
+  margin-left: 2%;
+}
+
+.course-search-form{
+  margin-bottom: 5%;
+}
+
+.trainee-search-form{
+  float: right;
+}
+
+.cancel-search{
+  margin-right: 15px;
 }

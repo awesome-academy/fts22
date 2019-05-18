@@ -10,6 +10,16 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def handle_routing_error
+    respond_to do |format|
+      format.html do
+        flash[:danger] = t "controllers.page_not_found"
+        redirect_to root_path
+      end
+      format.js{render nothing: true, status: 404}
+    end
+  end
+
   def set_locale
     I18n.locale = params[:locale] || I18n.default_locale
   end

@@ -13,6 +13,7 @@ gem "coffee-rails", "~> 4.2"
 gem "config"
 gem "delayed_job_active_record"
 gem "devise"
+gem "faker"
 gem "fog", "1.40.0"
 gem "jbuilder", "~> 2.5"
 gem "mini_magick", "4.7.0"
@@ -30,6 +31,10 @@ gem "will_paginate", "~> 3.1.0"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
+  gem "factory_bot_rails"
+  gem "rspec-collection_matchers"
+  gem "rspec-rails"
+  gem "shoulda-matchers"
 end
 
 group :development do

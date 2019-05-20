@@ -9,13 +9,23 @@ class Course < ApplicationRecord
 
   scope :newest, ->{order created_at: :desc}
   validates :name, presence: true,
-    length: {maximum: Settings.app.models.course.name_max_length}
+    length: {maximum: Settings.app.models.course.name_max_length},
+    uniqueness: {case_sensitive: false}
+  validates :description, presence: true,
+    length: {maximum: Settings.app.models.course.description_max_length}
   validates :start_date, presence: true,
     date: {after_or_equal_to: Time.now - 1.day}
   validates :end_date, presence: true,
     date: {after: :start_date}
+  validate :cannot_start_empty_course
   enum status: {open: 0, start: 1, finished: 2}
   mount_uploader :image, ImageUploader
+
+  def cannot_start_empty_course
+    return unless start? && subjects.blank?
+    errors.add :status,
+      I18n.t("course.no_subject")
+  end
 
   def trainers_not_in_course
     User.except_user_id(course_supervisors.pluck(:user_id)).trainer

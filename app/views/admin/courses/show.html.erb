@@ -14,7 +14,7 @@
     </p>
     <br />
     <div class="form-group">
-      <a data-toggle="collapse" data-target="#supervisor" href="#"><%= t ".trainers" %></a>
+      <a data-toggle="collapse" data-target="#supervisor" href="#"><%= t ".trainers" %> (<%= @course.course_supervisors.size %>)</a>
       <div id="supervisor" class="collapse">
         <table class="table table-condensed">
           <tbody id="supervisor-list">
@@ -22,13 +22,13 @@
           </tbody>
         </table>
         <div class="form-group" id="add-supervisor">
-          <%= render "admin/course_supervisors/create" %>
+          <%= render "admin/course_supervisors/create" unless @course.finished? %>
         </div>
       </div>
     </div>
     <br />
     <div class="form-group button_group">
-      <a data-toggle="collapse" data-target="#subjects" href="#"><%= t ".subjects" %></a>
+      <a data-toggle="collapse" data-target="#subjects" href="#"><%= t ".subjects" %> (<%= @course.course_subjects.size %>)</a>
       <div id="subjects" class="collapse">
         <table class="table table-condensed">
           <tbody id="subject-list">
@@ -36,7 +36,7 @@
           </tbody>
         </table>
         <div class="form-group" id="add-subject">
-          <%= render "admin/course_subjects/create" %>
+          <%= render "admin/course_subjects/create" unless @course.finished? %>
         </div>
       </div>
     </div>

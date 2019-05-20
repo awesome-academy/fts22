@@ -1,5 +1,5 @@
 <div class="course-search-form">
-  <%= search_form_for [:trainer ,@search], class: "form-inline" do |f| %>
+  <%= search_form_for [:admin ,@search], class: "form-inline" do |f| %>
     <div class="form-group ">
       <%= f.text_field :name_cont, class: "form-control", placeholder: t(".name_search") %>
     </div>

@@ -2,7 +2,7 @@
   <div class="country"><%= course.name %></div>
   <div class="country"><%= course.description %></div>
   <div class="country"><%= course.start_date %> to <%= course.end_date %></div>
-  <div class="country"><%= course.status %></div>
+  <div class="country"><%= t "activerecord.attributes.course.statuses.#{course.status}" %></div>
   <div class="country">
     <%= image_tag "#{course.image}", size: "126x77", alt: "not found", class: "course_img" %>
   </div>

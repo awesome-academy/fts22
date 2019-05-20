@@ -15,8 +15,10 @@ class Trainer::CourseSubjectsController < Trainer::BaseController
       respond_to do |format|
         format.js
       end
+      return
     end
-    if @course_subject.started!
+    if @course_subject.update_attribute :status,
+      Settings.app.course_subject.status.started
       @start_success_message =
         t "trainer.controllers.course_subjects_controller.start_success"
     else
@@ -29,7 +31,8 @@ class Trainer::CourseSubjectsController < Trainer::BaseController
   end
 
   def finish_subject
-    if @course_subject.finished!
+    if @course_subject.update_attribute :status,
+      Settings.app.course_subject.status.finished
       @finish_success_message =
         t "trainer.controllers.course_subjects_controller.finish_success"
     else

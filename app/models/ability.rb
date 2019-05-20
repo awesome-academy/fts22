@@ -27,6 +27,7 @@ class Ability
     can %i(read start_finish_course), Course
     can %i(create read update), Task
     can %i(create read update), User
+    can :manage, UserCourse
   end
 
   def authorize_to_trainee

@@ -5,7 +5,7 @@
       t(".name_search") %>
     </div>
     <div class="form-group form-component">
-      <%= f.select :status_eq, Course.statuses, {prompt: t(".status_search")},
+      <%= f.select :status_eq, human_attribute_course_enum, {prompt: t(".status_search")},
       class: "form-control" %>
     </div>
     <%= f.submit t(".search_button"), class: "btn btn-default form-component" %>

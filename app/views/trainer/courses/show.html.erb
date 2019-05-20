@@ -21,7 +21,7 @@
     </div>
     <br />
     <div class="form-group">
-      <a data-toggle="collapse" data-target="#trainee" href="#"><%= t ".trainees" %></a>
+      <a data-toggle="collapse" data-target="#trainee" href="#"><%= t ".trainees" %> (<%= @course.user_courses.size %>)</a>
       <div id="trainee" class="collapse">
         <table class="table table-condensed">
           <tbody id="trainee-list">
@@ -34,7 +34,8 @@
       </div>
     </div>
     <div class="form-group">
-      <a data-toggle="collapse" data-target="#subject" href="#"><%= t ".subjects" %></a>
+      <a data-toggle="collapse" data-target="#subject" href="#"><%= t ".subjects" %> (<%= @course.course_subjects.size %>)</a>
+      <div id="subject_error"></div>
       <div id="subject" class="collapse">
         <table class="table table-condensed">
           <tbody id="subject-list">

@@ -12,7 +12,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
       t.datetime :reset_password_sent_at
 
       ## Rememberable
-      t.datetime :remember_created_a
+      t.datetime :remember_created_at
       t.timestamps null: false
     end
 

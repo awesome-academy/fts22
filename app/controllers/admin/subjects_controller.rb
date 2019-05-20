@@ -3,7 +3,8 @@ class Admin::SubjectsController < Admin::BaseController
   before_action :load_subject, except: %i(index new create)
 
   def index
-    @subjects = Subject.newest.paginate page: params[:page],
+    @search = Subject.search params[:q]
+    @subjects = @search.result.newest.paginate page: params[:page],
       per_page: Settings.app.models.subject.subject_per_page
   end
 

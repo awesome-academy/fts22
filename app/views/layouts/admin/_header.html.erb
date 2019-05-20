@@ -10,7 +10,7 @@
   <div class="main_menu">
     <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container">
-        <a class="navbar-brand logo_h" href="index.html"><%= image_tag("sun-asterisk-logo.png", size: "170x102",alt: "Sun-asterisk") %></a>
+        <a class="navbar-brand logo_h" href="<%= root_path %>"><%= image_tag("sun-asterisk-logo.png", size: "170x102",alt: "Sun-asterisk") %></a>
         <% if user_signed_in? %>
           <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
             <ul class="nav navbar-nav menu_nav ml-auto">

@@ -4,7 +4,7 @@ class Trainer::TraineesController < Trainer::BaseController
   before_action :load_trainee, only: %i(edit update destroy)
 
   def index
-    @search = User.trainee.search params[:q]
+    @search = User.trainee.ransack params[:q]
     @trainees = @search.result.newest.paginate page: params[:page],
       per_page: Settings.app.users.users_per_page
   end

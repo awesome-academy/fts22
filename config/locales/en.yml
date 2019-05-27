@@ -255,7 +255,7 @@ en:
         name: Name
         email: Email
         submit_button: Update
-        back_button: Close
+        back_button: Cancel
       new:
         title: Trainees managemnt
         heading: New trainee

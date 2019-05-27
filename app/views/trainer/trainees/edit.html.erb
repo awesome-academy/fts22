@@ -3,7 +3,7 @@
 <section class="courses_area p_120"></section>
 <div class="container">
   <h3 class="mb-30 title_color"><%= t ".heading" %></h3>
-  <%= form_for @trainee, url: trainer_trainee_path(@trainee) do |f| %>
+  <%= form_for @trainee, url: trainer_trainee_path(id: @trainee.id) do |f| %>
     <%= render "shared/error_messages", object: f.object %>
     <div class="form-group">
       <%= f.label :name, t(".name") %>
